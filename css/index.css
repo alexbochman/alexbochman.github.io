@@ -1,0 +1,139 @@
+﻿
+html, body {
+    height: 100%;
+    width: 100%;
+}
+
+.navbar {
+    background-color: #34527d;
+    padding: 1% 0;
+    font-size: 1.2em;
+}
+
+.navbar-brand {
+    min-height: 55px;
+    padding: 0 15px 5px;
+    
+}
+
+.navbar-default .navbar-nav li a {
+    color: #D5D5D5;
+}
+
+.navbar-default .navbar-nav li a.active {
+    color: #FFF;
+}
+
+.navbar-default .navbar-nav li a:hover {
+    color: black;
+}
+
+#home {
+    background: url(../img/tech.jpeg) no-repeat center center fixed;
+    display: table;
+    height: 100%;
+    position: relative;
+    width: 100%;
+    background-size: cover;
+}
+
+.landing-text {
+    display: table-cell;
+    text-align: center;
+    vertical-align: middle;
+    color: #000;
+    font-family: "Arial"
+}
+
+.landing-text h1 {
+    font-size: 500%;
+    font-weight: 700;
+}
+
+.landing-text h3 {
+    font-size: 300%;
+    font-weight: 700;
+}
+
+
+.navIcon {
+    max-width: 100px;
+    max-height: 80px;
+    padding-bottom: 20px;
+}
+
+.icon {
+    max-width: 200px;
+}
+
+.padding {
+    padding: 80px 0;
+}
+
+.padding img {
+    width: 100%;
+}
+
+#fixed {
+    background: url(../img/tech.jpeg) no-repeat center center fixed;
+    display: table;
+    height: 60%;
+    position: relative;
+    width: 100%;
+    background-size: cover;
+}
+
+#email {
+    color: white;
+}
+
+#email:hover {
+    color: black;
+    text-decoration: none;
+}
+
+.binaryPic {
+    
+    margin-left: -100px;
+}
+
+footer {
+    width: 100%;
+    background-color: #34527d;
+    padding: 5% 5% 10% 5%;
+    color: #FFF;
+    text-align: center;
+}
+
+.fa {
+    padding: 15px;
+    font-size: 25px;
+    color: white;
+}
+
+.fa:hover {
+    color: black;
+    text-decoration: none;
+}
+
+@media (max-width: 768px) {
+
+    .landing-text h1 {
+        font-size: 300%;
+    }
+    
+    footer h3 {
+        margin-top: 30px;
+        margin-bottom: -20px;
+    }
+    
+    .icon {
+        padding-top: 5%;
+        max-width: 100px;
+    }
+    
+    .navbar ul {
+        text-align: center;
+    }
+    
+}
