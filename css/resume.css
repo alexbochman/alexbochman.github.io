@@ -56,11 +56,11 @@ a.text-theme:hover{
 }
 
 .nav-link.nav-resume-link#pdf-download:hover {
-    background-color: #103050;
+    background-color: darkgray;
 }
 
 .navbar-toggler-icon:hover, .navbar-toggler:hover {
-    background-color: #103050;
+    background-color: lightgray;
 }
 
 .anchor{

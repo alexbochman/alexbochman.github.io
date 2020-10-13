@@ -4,6 +4,10 @@ html, body {
     width: 100%;
 }
 
+a:hover {
+   text-decoration: none;
+}
+
 .navbar {
     background-color: #34527d;
     padding: 1% 0;
