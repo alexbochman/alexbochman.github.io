@@ -29,7 +29,7 @@ html, body {
 }
 
 #home {
-    background: url(../img/tech.jpeg) no-repeat center center fixed;
+    background: url(../files/tech.jpeg) no-repeat center center fixed;
     display: table;
     height: 100%;
     position: relative;
@@ -75,7 +75,7 @@ html, body {
 }
 
 #fixed {
-    background: url(../img/tech.jpeg) no-repeat center center fixed;
+    background: url(../files/tech.jpeg) no-repeat center center fixed;
     display: table;
     height: 60%;
     position: relative;
