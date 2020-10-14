@@ -40,3 +40,25 @@ Homework3.html and pacific.css both passedthe CSS validator (previously linked a
 The only issues I had with this assignment was trying to figure out how to get the page     <br>
 layout such that the navigation bar extends to the bottom of the container while pushing    <br>
 the footer to the right. I settled with using grid-areas.
+
+<hr>
+
+### <p align="center">Homework 4 - Implementing Bootstrap </p>
+
+<hr>       
+
+>I rebuilt my website from the ground up in order to effectively implement bootstrap.
+Additionally, there were many techniques and styles I wanted to experiment with, but 
+my previous website wasn't built around the ideas/techniques. 
+
+>Summary of what was used to enhance my website:
+
+<ul> 
+    <li> Bootstrap to allow a more sophisticated navigation bars (responsive, dynamic, easy to use). </li>
+    <li> Bootstrap to allow dynamic fixed background images (see index.html landing text for example). </li>
+    <li>Bootstrap in every other area to allow for ease of use on any device. </li>
+</ul>
+
+>Resources that I used:
+https://www.youtube.com/watch?v=9cKsq14Kfsw&ab_channel=DrewRyan
+https://www.youtube.com/watch?v=gqOEoUR5RHg&feature=youtu.be&ab_channel=DerekBanas
