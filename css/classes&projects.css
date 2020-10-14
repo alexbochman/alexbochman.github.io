@@ -1,0 +1,128 @@
+
+html, body {
+    height: 100%;
+    width: 100%;
+}
+
+a:hover {
+   text-decoration: none;
+}
+
+.navbar {
+    background-color: #34527d;
+    padding: 1% 0;
+    font-size: 1.2em;
+    max-height: 80px;
+    border-bottom-color: #34527d;
+}
+
+.navbar-brand {
+    min-height: 55px;
+    padding: 0 15px 5px;
+    
+}
+
+.navbar-default .navbar-nav li a {
+    color: #D5D5D5;
+}
+
+.navbar-default .navbar-nav li a.active {
+    color: #FFF;
+}
+
+.navbar-default .navbar-nav li a:hover {
+    color: black;
+}
+
+.navIcon {
+    max-width: 100px;
+    max-height: 80px;
+    padding-bottom: 20px;
+}
+
+.underline {
+    text-decoration: underline;
+}
+
+.sizeUp {
+    font-size: 16px;
+    padding-bottom: 5px;
+}
+
+ul.text-center{
+    list-style-type: none;
+    padding-left: 0px;
+    padding-right: 0px;
+}
+
+.icon {
+    max-width: 200px;
+}
+
+.padding {
+    padding: 80px 0;
+}
+
+#intro {
+    padding-top: 80px;
+    padding-bottom: 30px;
+    text-align: center;
+    color: white;
+    position: relative;
+    margin-bottom: -50px;
+    background: url(../files/particles.gif)
+}
+
+.filler {
+    margin-top: 30px;
+}
+
+#email {
+    color: white;
+}
+
+#email:hover {
+    color: black;
+    text-decoration: none;
+}
+
+footer {
+    width: 100%;
+    background-color: #34527d;
+    padding: 5% 5% 10% 5%;
+    color: #FFF;
+    text-align: center;
+}
+
+.fa {
+    padding: 15px;
+    font-size: 25px;
+    color: white;
+}
+
+.fa:hover {
+    color: black;
+    text-decoration: none;
+}
+
+@media (max-width: 768px) {
+
+    .landing-text h1 {
+        font-size: 300%;
+    }
+    
+    footer h3 {
+        margin-top: 30px;
+        margin-bottom: -20px;
+    }
+    
+    .icon {
+        padding-top: 5%;
+        max-width: 100px;
+    }
+    
+    .navbar ul {
+        text-align: center;
+    }
+    
+}
