@@ -59,6 +59,6 @@ my previous website wasn't built around the ideas/techniques.
     <li>Bootstrap in every other area to allow for ease of use on any device. </li>
 </ul>
 
->Resources that I used: <br>
-https://www.youtube.com/watch?v=9cKsq14Kfsw&ab_channel=DrewRyan
+>Resources that I used:                                             <br>
+https://www.youtube.com/watch?v=9cKsq14Kfsw&ab_channel=DrewRyan     <br>
 https://www.youtube.com/watch?v=gqOEoUR5RHg&feature=youtu.be&ab_channel=DerekBanas
