@@ -34,7 +34,7 @@
     </div>
 </nav>
     
-<div id="intro">
+<div id="intro" class="jumbotron">
     <div id="introText">
         <h1><strong>Classes &amp; Projects</strong></h1>
         <h3><strong>A Spot to Showcase My Work </strong></h3>
@@ -42,21 +42,24 @@
         
 </div>    
 
-<div class="filler"></div>
+
 
 <div class="padding">
 <div class="container">
-    
+
     <div class="row">
         <div class="col-sm-12 text-center">
+            <button type="button" class="btn btn-info" data-toggle="collapse" data-target="#guiInfo">
             <h3><strong>COMP 4610 - GUI Programming I</strong></h3>
             <p class="lead">
             <strong>University of Massachusetts Lowell - Fall 2020 Course</strong>
             <br>
-        </div>
+            <span class="glyphicon glyphicon-chevron-down"></span>
+        </p>
+    </button>
     </div>
     
-    <div class="row">
+    <div class="row collapse cad card-body" id="guiInfo">
         <div class="col-sm-6">
             <h4 class="text-center underline "><strong>Assignments</strong></h4>
             <ul class="text-center">
@@ -65,15 +68,17 @@
                 <li class="sizeUp"><a href="#">Assignment 4 - Implementing Bootstrap</a></li>
             </ul>
         </div>
-        
+
         <div class="col-sm-6">
             <h4 class="text-center underline "><strong>In Class Exercises</strong></h4>
             <ul class="text-center">
                 <li class="sizeUp"><a href="./InClass-1.html">Exercise 1 - Lorem Ipsum</a></li>
                 <li class="sizeUp"><a href="./InClass-2.html">Exercise 2 - The Analog Specialists</a></li>
+                <li class="sizeUp"><a href="./InClass-3.html">Exercise 3 - Styling With Bootstrap</a></li>
             </ul>
         </div>
     </div>
+    
     
 </div>
 </div>
