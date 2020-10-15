@@ -66,6 +66,7 @@ ul.text-center{
     background-color: white;
     color: black;
     border-style: none;
+    white-space: normal;
 }
 
 .btn:hover, .btn:focus, .btn:active {
@@ -155,9 +156,5 @@ footer {
         text-align: center;
     }
     
-    .btn {
-    display: block;
-    width: 100%;
-  }
     
 }
