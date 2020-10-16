@@ -66,19 +66,26 @@ ul.text-center{
     padding: 80px 0;
 }
 
-.btn {
-    background-color: white;
-    color: black;
-    border-style: none;
-    white-space: normal;
+.btn{
+    background-color: white !important;
+    color: black !important;
+    border-style: none !important;
+    white-space: normal !important;
+    outline: none !important;
+    box-shadow: 3px 3px 10px 2px #aaa !important;
+    padding-bottom: 0;
+    margin-bottom: 10px;
 }
 
-.btn:hover, .btn:focus, .btn:active {
+.btn:hover{
     color: #34527d !important;
     background-color: white !important;
-    border-style: none !important;
-    outline: none!important;
+    border-style: 0 !important;
+    outline: 1px !important;
+    box-shadow: 3px 3px 6px 2px #aaa inset !important;
 }
+
+
 
 .glyphicon {
   
