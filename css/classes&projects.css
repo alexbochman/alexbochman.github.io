@@ -75,9 +75,10 @@ ul.text-center{
     box-shadow: 5px 5px 10px #aaa !important;
     padding-bottom: 0px;
     margin-bottom: 20px;
+    border-radius: 5px;
 }
 
-.btn:hover {
+.button-text:hover {
     color: #34527d !important;
 }
 
@@ -90,14 +91,11 @@ ul.text-center{
 }
 
  .btn:focus {
-   color: #34527d !important;
     background-color: white !important;
     border-style: 0 !important;
     outline: 1px !important;
     box-shadow:  4px 4px 10px #aaa inset !important; 
 }
-
-
 
 .glyphicon {
   padding-top: 10px;
