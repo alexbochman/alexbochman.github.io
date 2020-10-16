@@ -72,23 +72,35 @@ ul.text-center{
     border-style: none !important;
     white-space: normal !important;
     outline: none !important;
-    box-shadow: 3px 3px 10px 2px #aaa !important;
-    padding-bottom: 0;
+    box-shadow: 5px 5px 10px #aaa !important;
+    padding-bottom: 0px;
     margin-bottom: 10px;
 }
 
-.btn:hover{
+.btn:hover {
     color: #34527d !important;
+}
+
+.btn, .btn:hover, .btn.active:active {
+    
     background-color: white !important;
     border-style: 0 !important;
     outline: 1px !important;
-    box-shadow: 3px 3px 6px 2px #aaa inset !important;
+    box-shadow: 3px 3px 6px #aaa !important;
+}
+
+ .btn:focus {
+   color: #34527d !important;
+    background-color: white !important;
+    border-style: 0 !important;
+    outline: 1px !important;
+    box-shadow:  4px 4px 10px #aaa inset !important; 
 }
 
 
 
 .glyphicon {
-  
+  padding-top: 10px;
 }
 
 
