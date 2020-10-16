@@ -3,6 +3,14 @@
     width: 100%;
 }
 
+h1,h2,h3,h4,h5,h6,p,nav {
+    font-family: georgia;  
+}
+
+p {
+
+}
+
 a:hover {
    text-decoration: none;
 }
@@ -11,7 +19,7 @@ a:hover {
     background-color: #34527d;
     padding: 1% 0;
     font-size: 1.2em;
-    max-height: 80px;
+    border-bottom-color: #34527d;
 }
 
 .navbar-brand {
@@ -33,7 +41,7 @@ a:hover {
 }
 
 #home {
-    background: url(../files/tech.jpeg) no-repeat center center fixed;
+    background: url(../files/mountains.jpeg) no-repeat center center fixed;
     display: table;
     height: 100%;
     position: relative;
