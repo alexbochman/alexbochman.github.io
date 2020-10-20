@@ -78,6 +78,9 @@ ul.text-center{
     border-radius: 5px;
 }
 
+.button-text {
+}
+
 .button-text:hover {
     color: #34527d !important;
 }
@@ -90,15 +93,19 @@ ul.text-center{
     box-shadow: 3px 3px 6px #aaa !important;
 }
 
- .btn:focus {
+ .btn:focus, .btn:hover {
     background-color: white !important;
     border-style: 0 !important;
     outline: 1px !important;
     box-shadow:  4px 4px 10px #aaa inset !important; 
 }
 
-.glyphicon {
-  padding-top: 10px;
+.button-subtext {
+    margin-bottom: 3px;
+}
+
+.glyphicon-chevron-down {
+    margin-bottom: 5px;
 }
 
 
