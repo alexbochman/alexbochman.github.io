@@ -1,0 +1,117 @@
+<!DOCTYPE html>
+<html>
+<head>
+  <title>Alex Bochman's Website - Homework 5</title>
+    
+    <meta charset="utf-8"/>
+    <meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1, user-scalable=no">
+    
+    
+    <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/css/bootstrap.min.css">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
+    <link rel="shortcut icon" href="../../files/faviconCoffee2.png" />
+    <link href="../../css/style.css" rel="stylesheet" />
+    <link href="./css/Homework5.css" rel="stylesheet" />
+    <link href="https://fonts.googleapis.com/css?family=Lato:300,400,700,300italic,400italic,700italic " rel="stylesheet
+      " type="text/css">
+ 
+</head>
+
+<body>
+    <!-- Navigation Bar -->
+    <nav class="navbar navbar-expand-lg navbar-default navbar-fixed-top" role="navigation">
+        <div class="container-fluid sticky-top">
+            <div class="navbar-header">
+                <button type="button" class="navbar-toggle" data-toggle="collapse" data-target="#navbar-collapse-main">
+                    <span class="sr-only">Toggle navigation</span>
+                    <span class="icon-bar"></span>
+                    <span class="icon-bar"></span>
+                    <span class="icon-bar"></span>
+                </button>
+                <a class="navbar-brand" href="#"><img src="../../files/Coffee_to_code_thumbnail.png" alt="Coffee to code thumbnail" class="img-responsive navIcon"></a>
+            </div>
+            <div class="collapse navbar-collapse" id="navbar-collapse-main">
+                <ul class="nav navbar-nav navbar-right">
+                    <li><a class="active" href="../index.html">Home</a></li>
+                    <li><a href="./classes&projects.html">Classes &amp; Projects</a></li>
+                    <li><a href="./resume.html">Resume</a></li>
+                </ul>
+            </div>
+        </div>
+    </nav>
+
+<div class="container landing-text text-center">
+    <h1>Homework 5 - JavaScript</h1>
+    <h3>Creating an Interactive Dynamic Table</h3>
+</div>
+
+    <!-- Form -->
+<div class="container myForm">
+    <div class="container row col-md-offset-1">
+        <form class="form-horizontal" action="/action_page.php">
+            <div class="form-group">
+                <label class="col-md-2 control-label">X-Axis Start Number</label>
+                <div class="col-md-7">
+                    <input type="number" class="form-control" id="xStart" min="-50" max="50" placeholder="xStart">
+                </div>
+            </div>
+
+            <div class="form-group">
+                <label class="col-md-2 control-label">X-Axis End Number</label>
+                <div class="col-md-7">
+                    <input type="number" class="form-control" id="xEnd" min="-50" max="50" placeholder="xEnd" />
+                </div>
+            </div>
+
+            <div class="form-group">
+            <label class="col-md-2 control-label">Y-Axis Start Number</label>
+                <div class="col-md-7">
+                    <input type="number" class="form-control" id="yStart" min="-50" max="50" placeholder="yStart">
+                </div>
+            </div>
+
+            <div class="form-group">
+            <label class="col-md-2 control-label">Y-Axis End Number</label>
+                <div class="col-md-7">
+                    <input type="number" class="form-control" id="yEnd" min="-50" max="50" placeholder="yEnd">
+                </div>
+            </div>
+        </form>
+    </div>
+</div> 
+    
+    <p id="test"></p>
+    
+    
+<div class="container text-center">
+    <button class="btn-lg btn-primary" type="button" onclick="generateTable()">Generate Table</button>
+</div>
+    
+<div class="filler"></div>
+    
+<footer class="container-fluid text center">
+    <div class="row">
+        <div class="col-sm-4">
+            <h3>Contact</h3>
+            <br>
+            <h4><a href="mailto:alexbochman22@gmail.com" id="email">alexbochman22@gmail.com</a></h4>
+        </div>
+        <div class="col-sm-4">
+            <h3>Connect</h3>
+            <br>
+            <a href="https://www.linkedin.com/in/alexander-bochman-25137014a/" class="fa fa-linkedin"></a>
+            <a href="https://github.com/alexbochman" class="fa fa-github"></a>
+            <!--<a href="https://www.youtube.com/channel/UC5NuQhvZ4nee_z9p-prRLqQ" class="fa fa-youtube"></a>-->
+        </div>
+        <div class="col-sm-4">
+            <img src="../../files/AB%20Initials.png" alt="Initials icon image" class="icon">
+        </div>
+    </div>
+</footer>
+
+<script src="../js/Homework5.js"></script>
+<script src="https://ajax.googleapis.com/ajax/libs/jquery/3.2.1/jquery.min.js"></script>
+<script src="https://maxcdn.bootstrapcdn.com/bootstrap/4.5.2/js/bootstrap.min.js"></script>
+    
+</body>
+</html>

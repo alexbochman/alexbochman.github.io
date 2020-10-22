@@ -1,0 +1,19 @@
+.landing-text {
+    margin-top: 100px;
+}
+
+.filler {
+    padding-bottom: 100px;
+}
+
+.myForm{
+    padding-top: 30px;
+    padding-bottom: 30px;
+}
+
+#myCanvas {
+    margin-top: 50px;
+    height: 500px;
+    border: solid;
+    width: 100%;
+}
