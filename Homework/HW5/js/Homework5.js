@@ -12,6 +12,6 @@ function generateTable() {
     var test = document.getElementById('test');
     test.innerHTML = xStart + " " + xEnd + " " + yStart + " " + yEnd;
     
+    for(xStart; xStart < xEnd; xStart++)
+        console.log(xStart);
 }
-
-
