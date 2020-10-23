@@ -99,7 +99,6 @@ function createTable(xMin,xMax,yMin,yMax,table,row,cell){
 // has no value, or is outside of the range -50 to 50.
 function isValid(input, errorID) {
     errorID.innerHTML = "";
-    console.log(input);
     if(isNaN(input) || input == "" || input > 50 || input < -50){
         errorID.innerHTML = "[INPUT ERROR] Please provide a number between -50 and 50.";
         return false;

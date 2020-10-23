@@ -60,7 +60,7 @@ table {
 }
 
 footer {
-    margin-top: 100px;
+    margin-top: 50px;
 }
 
 /* Error message styling when for input validation */
@@ -112,4 +112,18 @@ tr:first-child > td {
 tr:nth-child(odd) {
     background-color: #eee !important;
     
+}
+
+@media (max-width: 500px) {
+    #table-wrapper {
+    height: auto;
+    overflow: auto;
+    max-height: 550px;
+    width: 340px;
+    height: 500px;
+    }
+    
+    footer {
+        margin-top: 50px;
+    }
 }
