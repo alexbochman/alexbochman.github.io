@@ -1,4 +1,16 @@
+/*
+Alex Bochman
+alexander_bochman@student.uml.edu
 
+UMass Lowell Computer Science
+COMP 4610 Section 201 - GUI I Programming
+HW 5 - Creating an Interactive Dynamic Table
+10/22/2020
+*/
+
+// Function initializes and calls all of the required
+// functions to validate the input and then create 
+// the table.
 function generateTable() {
     // Initialization. Input captured from the form
     var xStart = document.getElementById('xStart').value;
