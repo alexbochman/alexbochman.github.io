@@ -44,54 +44,68 @@
     <h1>Homework 5 - JavaScript</h1>
     <h3>Creating an Interactive Dynamic Table</h3>
 </div>
+    
+<div id="info" class="text-center">
+    <p class="container">
+        Create a table dynamically based on parameters entered in an HTML form. First,  a form is created that accepts the starting and ending numbers for both the horizontal (multiplier) and vertical (multiplicand) axes of a multiplication table. Second, numbers entered into the form create a multiplication table dynamically. This is what is commonly called a “single page web app” (or application). To start, enter in four numbers within the range of -50 to 50 and then click the "Generate Table" button.
+        <br><br>
+        Check out the code for this page on my <a href="https://github.com/alexbochman/alexbochman.github.io/tree/main/Homework/HW5">GitHub</a>.
+    </p>
+</div>
 
     <!-- Form -->
 <div class="container myForm">
     <div class="container row col-md-offset-1">
         <form class="form-horizontal" action="/action_page.php">
-            <div class="form-group">
-                <label class="col-md-2 control-label">X-Axis Start Number</label>
-                <div class="col-md-7">
-                    <input type="number" class="form-control" id="xStart" min="-50" max="50" placeholder="xStart">
+            
+            <div class="inputHeader col-xs-12">Please enter x-axis starting and ending number (multiplier).</div>
+            
+            <div class="form-group container-fluid col-xs-6">
+                <div class="inputField">
+                    <input type="number" class="form-control" id="xStart" min="-50" max="50" placeholder="X-Axis Start" required>
+                    <div class="errorMessage" id="xStartError"></div>
                 </div>
             </div>
 
-            <div class="form-group">
-                <label class="col-md-2 control-label">X-Axis End Number</label>
-                <div class="col-md-7">
-                    <input type="number" class="form-control" id="xEnd" min="-50" max="50" placeholder="xEnd" />
-                    
+            <div class="form-group container col-xs-6">
+                <div class="inputField">
+                    <input type="number" class="form-control" id="xEnd" min="-50" max="50" placeholder="X-Axis End" />
+                    <div class="errorMessage" id="xEndError"></div>
+                </div>
+            </div>
+            
+            <div class="inputHeader col-xs-12">Please enter y-axis starting and ending number (multiplicand).</div>
+            
+            <div class="form-group col-xs-6">
+                <div class="inputField">
+                    <input type="number" class="form-control" id="yStart" min="-50" max="50" placeholder="Y-Axis Start" required>
+                    <div class="errorMessage" id="yStartError"></div>
                 </div>
             </div>
 
-            <div class="form-group">
-            <label class="col-md-2 control-label">Y-Axis Start Number</label>
-                <div class="col-md-7">
-                    <input type="number" class="form-control" id="yStart" min="-50" max="50" placeholder="yStart">
-                </div>
-            </div>
-
-            <div class="form-group">
-            <label class="col-md-2 control-label">Y-Axis End Number</label>
-                <div class="col-md-7">
-                    <input type="number" class="form-control" id="yEnd" min="-50" max="50" placeholder="yEnd">
+            <div class="form-group col-xs-6">
+                <div class="inputField">
+                    <input type="number" class="form-control" id="yEnd" min="-50" max="50" placeholder="Y-Axis End" required>
+                    <div class="errorMessage" id="yEndError"></div>
                 </div>
             </div>
         </form>
+        <div class="container col-xs-6 text-left">
+            <button class="btn-lg btn-primary" type="button" onclick="generateTable()">Generate Table</button>
+        </div>
+        <div class="container col-xs-6">
+            <div id="inputX"></div>
+            <div id="inputY"></div>
+        </div>
     </div>
 </div> 
     
-    <p id="test"></p>
-    
-    
-<div class="container text-center">
-    <button class="btn-lg btn-primary" type="button" onclick="generateTable()">Generate Table</button>
-</div>
+
     
 <div class="filler"></div>
     
-<div class="container">
-  <div id=table_container>
+<div class="container" id="table-wrapper">
+  <div id="table-container">
     <table class="table table-striped table-dark table-bordered" id="dynamicTable">
     </table>
   </div>

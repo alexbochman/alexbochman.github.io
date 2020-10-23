@@ -2,18 +2,93 @@
     margin-top: 100px;
 }
 
+p {
+    font-size: 16px;
+    padding-top: 10px;
+    padding-bottom: 10px;
+    margin-top: 20px;
+    margin-bottom: 10px;
+    border-top: double;
+    border-bottom: double;
+}
+
 .filler {
-    padding-bottom: 100px;
+    padding-bottom: 30px;
 }
 
 .myForm{
     padding-top: 30px;
     padding-bottom: 30px;
+    background-color: #fcf8f2;
+    border: double;
 }
 
-#myCanvas {
+.inputHeader {
+    font-weight: bold
+}
+
+.inputField {
+    max-width: 300px;
+    padding-left: 10px;
+}
+
+.btn-primary {
+    background-color: #34527d;
+}
+
+table {
+    text-align: center; 
+}
+
+footer {
+    margin-top: 100px;
+}
+
+
+.errorMessage {
+  font-size: 12px;
+  color: red;
+}
+
+#table-container {
     margin-top: 50px;
-    height: 500px;
-    border: solid;
-    width: 100%;
+    overflow: visible;
+    margin-left: auto;
+    margin-right: auto;
+    margin-top: 0px;
+}
+
+#table-wrapper {
+    height: auto;
+    overflow: auto;
+    max-height: 550px;
+}
+
+#inputX, #inputY {
+    margin-left: -30px;
+    font-weight: bold;
+}
+
+/*Table Header Style*/
+td:first-child {
+    background-color: #888;
+    color: black;
+    font-weight: bold;
+}
+
+td:first-child {
+    position: -webkit-sticky;
+  position: sticky;
+  left: -20px;
+  z-index: 1;
+}
+
+tr:first-child > td {
+    background-color: #888;
+    color: black;
+    font-weight: bold;
+    position: -webkit-sticky;
+    position: sticky;
+    top: -5px;
+    z-index: 2;
 }
