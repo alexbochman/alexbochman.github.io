@@ -4,8 +4,8 @@ alexander_bochman@student.uml.edu
 
 UMass Lowell Computer Science
 COMP 4610 Section 201 - GUI I Programming
-HW 6
-10/27/2020
+HW 6 - Adding jQuery to Interactive Dynamic Table
+10/29/2020
 -->
 
 <!DOCTYPE html>
@@ -78,13 +78,13 @@ HW 6
             
             <div class="form-group container-fluid col-xs-6">
                 <div class="inputField">
-                    <input type="number" class="form-control" id="xStart" name="xStart" min="-50" max="50" placeholder="X-Axis Start" required>
+                    <input onkeydown="return event.keyCode !== 69" type="number" class="form-control" id="xStart" name="xStart" min="-50" max="50" placeholder="X-Axis Start" required>
                 </div>
             </div>
 
             <div class="form-group container col-xs-6">
                 <div class="inputField">
-                    <input type="number" class="form-control" id="xEnd" name="xEnd" min="-50" max="50" placeholder="X-Axis End" required>
+                    <input onkeydown="return event.keyCode !== 69" type="number" class="form-control" id="xEnd" name="xEnd" min="-50" max="50" placeholder="X-Axis End" required>
                 </div>
             </div>
             
@@ -92,13 +92,13 @@ HW 6
             
             <div class="form-group col-xs-6">
                 <div class="inputField">
-                    <input type="number" class="form-control" id="yStart" name="yStart" min="-50" max="50" placeholder="Y-Axis Start" required>
+                    <input onkeydown="return event.keyCode !== 69" type="number" class="form-control" id="yStart" name="yStart" min="-50" max="50" placeholder="Y-Axis Start" required>
                 </div>
             </div>
 
             <div class="form-group col-xs-6">
                 <div class="inputField">
-                    <input type="number" class="form-control" id="yEnd" name="yEnd" min="-50" max="50" placeholder="Y-Axis End" required>
+                    <input onkeydown="return event.keyCode !== 69" type="number" class="form-control" id="yEnd" name="yEnd" min="-50" max="50" placeholder="Y-Axis End" required>
                 </div>
             </div>
         </form>

@@ -4,12 +4,9 @@ alexander_bochman@student.uml.edu
 
 UMass Lowell Computer Science
 COMP 4610 Section 201 - GUI I Programming
-HW 6 - Creating an Interactive Dynamic Table
-10/22/2020
+HW 6 - Adding jQuery to Interactive Dynamic Table
+10/29/2020
 */
-
-
-
 
 // Validation Plugin
 // Check if its not empty and is a number
@@ -35,22 +32,23 @@ $().ready(function(){
                 number: true
             }
         },
+        // Custom messages to be displayed when and if things go wrong
         messages: {
             xStart: {
-                required: "<b>Number</b> required!",
-                number: "Please enter a valid <b>number</b>."
+                required: "<b>Number</b> between -50 & 50 required!",
+                number: "Please enter a <b>valid number</b>."
             },
             xEnd: {
-                required: "<b>Number</b> required!",
-                number: "Please enter a valid <b>number</b>."               
+                required: "<b>Number</b> between -50 & 50 required!",
+                number: "Please enter a <b>valid number</b>."               
             },
             yStart: {
-                required: "<b>Number</b> required!",
-                number: "Please enter a valid <b>number</b>."
+                required: "<b>Number</b> between -50 & 50 required!",
+                number: "Please enter a <b>valid number</b>."
             },
             yEnd: {
-                required: "<b>Number</b> required!",
-                number: "Please enter a valid <b>number</b>."
+                required: "<b>Number</b> between -50 & 50 required!",
+                number: "Please enter a <b>valid number</b>."
             }
         }
       
