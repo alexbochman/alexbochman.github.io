@@ -12,6 +12,15 @@ body{
    background-color: #f3f5f9;
 }
 
+.memberBlock {
+    /*border: solid 1px; */
+    background-color: white;
+}
+
+.row {
+    background-color: white;
+}
+
 .header {
     font-size: 30px;
     font-weight: bold;
@@ -54,6 +63,7 @@ body{
   border-bottom: 1px solid rgba(0,0,0,0.05);
   border-top: 1px solid rgba(255,255,255,0.05);
   transition: 0.3s;
+  cursor: pointer;
 }    
 
 .wrapper .sidenav ul li a{
@@ -65,11 +75,11 @@ body{
   width: 25px;
 }
 
-.wrapper .sidenav ul li:hover{
+.wrapper .sidenav ul li:hover, .toggle_button:hover{
   background-color: #44628d;
 }
     
-.wrapper .sidenav ul li:hover a{
+.wrapper .sidenav ul li:hover a, #toggleIcon:hover{
   color: #fff;
 }
  
@@ -84,14 +94,14 @@ body{
 .wrapper .sidenav .toggle_button a{
   display: block;
   width: 200px;
-  background: #44628d;
   height: 40px;
   line-height: 45px;
   text-align: center;
   margin: 0 5px;
   color: #fff;
-  border-top-left-radius: 5px;
-  border-top-right-radius: 5px;
+  border-top: 2px solid #bdb8d7;
+  border-top: 2px solid rgba(0,0,0,0.05);
+  border-top: 1px solid rgba(255,255,255,0.05);
 }
 
 .wrapper .main_content{
@@ -127,6 +137,7 @@ body{
     transition: .5s;
     font-size: 20px;
     margin-left: 10px;
+    color: #bdb8d7;
 }
 
 .rotated-icon {
@@ -161,7 +172,7 @@ body{
 }
 
 #overview {
-    display: block
+    display: block;
 }
 
 @media (max-width: 800px) {

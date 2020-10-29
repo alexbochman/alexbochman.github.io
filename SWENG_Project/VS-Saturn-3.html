@@ -35,9 +35,9 @@ HW 5 - Creating an Interactive Dynamic Table
         <div id="mySidenav" class="sidenav">
             <img id="sideNavHeader" src="../files/visual-studio-code.svg" >
             <ul id="navList">
-                <li><a href="#" onclick="showhide('overview')"><i class="fas fa-home"></i>Overview</a></li>
-                <li><a href="#" onclick="showhide('members')"><i class="fas fa-users"></i>Members</a></li>
-                <li><a href="#" onclick="showhide('updates')"><i class="fas fa-file-alt"></i>Updates</a></li>
+                <li onclick="showhide('overview')"><a href="#" ><i class="fas fa-home"></i>Overview</a></li>
+                <li onclick="showhide('members')"><a href="#" onclick="showhide('members')"><i class="fas fa-users"></i>Members</a></li>
+                <li onclick="showhide('updates')"><a href="#" ><i class="fas fa-file-alt"></i>Updates</a></li>
                 <li><a href="https://github.com/alexbochman/alexbochman.github.io/tree/main/SWENG_Project"><i class="fab fa-github"></i>GitHub</a></li>
             </ul> 
             <div class="toggle_button">
@@ -66,7 +66,9 @@ HW 5 - Creating an Interactive Dynamic Table
                     a. If you have recorded fewer than four check-marks, take a 3-5 minute break. <br>
                     b. If you reach your fourth check-mark, take a 20-30 minute break. <br>
         
-                    3. After break time has elapsed, set another timer for 25 minutes and repeat. <br><br>
+                    3. After break time has elapsed, set another timer for 25 minutes and repeat. 
+                        
+                    <br><br>
                         
                     This simple technique increases focus on the task at hand and allows down-time for your brain to rest
                     and re-focus. This solves the problem of staring at work for hours at a time and reduces the risk of
@@ -76,32 +78,81 @@ HW 5 - Creating an Interactive Dynamic Table
                     using an IDE (namely, Visual Studio Code) to develop, so my idea aims to streamline the number of
                     steps it takes to track my time.
                     If the reader has ever used Visual Studio Code (abbr. to VSCode) then they would know that
-                    it supports the creation of add-ons. Add-ons can be used to change the appearance of the IDE, add
+                    it supports the creation of add-ons. 
+                    
+                    <br> <br> 
+                        
+                    Add-ons can be used to change the appearance of the IDE, add
                     functionality not built-in such as PDF viewing or Intellisense, and is a great way to customize VSCode
                     to fit your need. My proposal is to build a pomodoro timer for VSCode that will provide task tracking
                     functionality not offered by any other add-on currently on the marketplace. Other pomodoro timers
                     have been developed, but the following features that I intend to implement make VS-Saturn the
                     optimal choice: <br>
+                        
                     <br>• Snooze button for delaying the end of a work or rest cycle.
                     <br>• Task checklist for the 25-minute timer and rest timer so you can track progress and set goals.
                     <br>• Non-intrusive notification for when a timer is up (changes VSCode’s theme from light to dark
                     and vice versa so that you are not inclined to look at your IDE).
+                    
+                    <br><br>
+                    
                     All VSCode applications are developed with JavaScript or TypeScript and VS-Saturn is no
                     exception. Since VS-Saturn is an add-on, it will be contained within the VSCode application and will
                     not require compilation of an executable. All development and testing can be done within VSCode,
                     and anything outside of that platform is out of the scope of this application. This add-on will be built
-                    using the VSCode extension API.2</p>
+                    using the VSCode extension API.</p>
                 </div>
                 <div class="myHide" id="members">
-                    <h2 class="underline">Members - Info about us, and stuff</h2>
+                    <h2 class="text-center">Meet The Team</h2>
                     <br>
-                    <h4>Alex Bochman</h4>
-                    <h4>Luann Dias</h4>
-                    <h4>Michael Gonzales</h4>
-                    <h4>Dominic Gordon</h4>
-                    <h4>Derek Lamoreaux</h4>
-                    <br>
-                    <p>Lorem ipsum dolor sit, amet consectetur adipisicing elit. A sed nobis ut exercitationem atque accusamus sit natus officiis totam blanditiis at eum nemo, nulla et quae eius culpa eveniet voluptatibus repellat illum tenetur, facilis porro. Quae fuga odio perferendis itaque alias sint, beatae non maiores magnam ad, veniam tenetur atque ea exercitationem earum eveniet totam ipsam magni tempora aliquid ullam possimus? Tempora nobis facere porro, praesentium magnam provident accusamus temporibus! Repellendus harum veritatis itaque molestias repudiandae ea corporis maiores non obcaecati libero, unde ipsum consequuntur aut consectetur culpa magni omnis vero odio suscipit vitae dolor quod dignissimos perferendis eos? Consequuntur!</p>
+                    <div class="container row col-xs-12"> 
+                        <div class="memberBlock col-xs-12 col-sm-12 col-md-6" id="teamInfo">
+                            <h4>Team Info</h4>
+                            <p>Lorem ipsum dolor sit, amet consectetur adipisicing elit. A sed nobis ut exercitationem atque accusamus sit natus officiis totam blanditiis at eum nemo, nulla et quae eius culpa eveniet voluptatibus repellat illum tenetur, facilis porro. Quae fuga odio perferendis itaque alias sint, beatae non maiores magnam ad, veniam tenetur atque ea exercitationem earum eveniet totam ipsam magni tempora aliquid ullam possimus? Tempora nobis facere porro, praesentium magnam provident accusamus temporibus! Repellendus harum veritatis itaque molestias repudiandae ea corporis maiores non obcaecati libero, unde ipsum consequuntur aut consectetur culpa magni omnis vero odio suscipit vitae dolor quod dignissimos perferendis eos? Consequuntur!
+                            </p>
+                        </div>
+                        <div class="memberBlock col-xs-12 col-sm-12 col-md-6" id="alexInfo">
+                            <h4>Alex Bochman</h4>
+                            <p>I'm a senior studying Computer Science at the University of Massachusetts Lowell. I received my Associate's Degree from Northern Essex Community College in Haverhill Massachusetts, and my tentative plan after graduating is to find a tech company to work for in Boston, MA.<br><br>
+
+                            I'm interested in software engineering and UI/UX development. I like building things from the ground up and seeing the results of my work, and being able to share it with others. Additionally, I strive to produce code that's clean and efficient. Learn more about me and my work below.
+                            </p>
+                            
+                            <ul>
+                                <li><strong>GitHub:</strong><a href="https://github.com/alexbochman"> https://github.com/alexbochman</a></li>
+                                <li><strong>LinkedIn:</strong><a href="https://www.linkedin.com/in/alexander-bochman-25137014a/"> www.linkedin.com/in/alexander-bochman</a></li>
+                                <li><strong>Personal Website:</strong><a href="https://alexbochman.github.io/"> https://alexbochman.github.io/</a></li>
+                            </ul>
+        
+                        </div>
+                    </div>
+
+                    <div class="container row col-xs-12"> 
+                        <div class="memberBlock col-xs-12 col-sm-12 col-md-6" id="">
+                            <h4>Luann Dias</h4>
+                            <p>Lorem ipsum dolor sit, amet consectetur adipisicing elit. A sed nobis ut exercitationem atque accusamus sit natus officiis totam blanditiis at eum nemo, nulla et quae eius culpa eveniet voluptatibus repellat illum tenetur, facilis porro. Quae fuga odio perferendis itaque alias sint, beatae non maiores magnam ad, veniam tenetur atque ea exercitationem earum eveniet totam ipsam magni tempora aliquid ullam possimus? Tempora nobis facere porro, praesentium magnam provident accusamus temporibus! Repellendus harum veritatis itaque molestias repudiandae ea corporis maiores non obcaecati libero, unde ipsum consequuntur aut consectetur culpa magni omnis vero odio suscipit vitae dolor quod dignissimos perferendis eos? Consequuntur!
+                            </p>
+                        </div>
+                        <div class="memberBlock col-xs-12 col-sm-12 col-md-6" id="alexInfo">
+                            <h4>Michael Gonzales</h4>
+                            <p>Lorem ipsum dolor sit, amet consectetur adipisicing elit. A sed nobis ut exercitationem atque accusamus sit natus officiis totam blanditiis at eum nemo, nulla et quae eius culpa eveniet voluptatibus repellat illum tenetur, facilis porro. Quae fuga odio perferendis itaque alias sint, beatae non maiores magnam ad, veniam tenetur atque ea exercitationem earum eveniet totam ipsam magni tempora aliquid ullam possimus? Tempora nobis facere porro, praesentium magnam provident accusamus temporibus! Repellendus harum veritatis itaque molestias repudiandae ea corporis maiores non obcaecati libero, unde ipsum consequuntur aut consectetur culpa magni omnis vero odio suscipit vitae dolor quod dignissimos perferendis eos? Consequuntur!
+                            </p>
+                        </div>
+                    </div>
+                    
+                    <div class="container row col-xs-12"> 
+                        <div class="memberBlock col-xs-12 col-sm-12 col-md-6" id="dominicInfo">
+                            <h4>Dominic Gordon</h4>
+                            <p>Lorem ipsum dolor sit, amet consectetur adipisicing elit. A sed nobis ut exercitationem atque accusamus sit natus officiis totam blanditiis at eum nemo, nulla et quae eius culpa eveniet voluptatibus repellat illum tenetur, facilis porro. Quae fuga odio perferendis itaque alias sint, beatae non maiores magnam ad, veniam tenetur atque ea exercitationem earum eveniet totam ipsam magni tempora aliquid ullam possimus? Tempora nobis facere porro, praesentium magnam provident accusamus temporibus! Repellendus harum veritatis itaque molestias repudiandae ea corporis maiores non obcaecati libero, unde ipsum consequuntur aut consectetur culpa magni omnis vero odio suscipit vitae dolor quod dignissimos perferendis eos? Consequuntur!
+                            </p>
+                        </div>
+                        <div class="memberBlock col-xs-12 col-sm-12 col-md-6" id="derekInfo">
+                            <h4>Derek Lamoreaux</h4>
+                            <p>Lorem ipsum dolor sit, amet consectetur adipisicing elit. A sed nobis ut exercitationem atque accusamus sit natus officiis totam blanditiis at eum nemo, nulla et quae eius culpa eveniet voluptatibus repellat illum tenetur, facilis porro. Quae fuga odio perferendis itaque alias sint, beatae non maiores magnam ad, veniam tenetur atque ea exercitationem earum eveniet totam ipsam magni tempora aliquid ullam possimus? Tempora nobis facere porro, praesentium magnam provident accusamus temporibus! Repellendus harum veritatis itaque molestias repudiandae ea corporis maiores non obcaecati libero, unde ipsum consequuntur aut consectetur culpa magni omnis vero odio suscipit vitae dolor quod dignissimos perferendis eos? Consequuntur!
+                            </p>
+                        </div>
+                    </div>
+                    
                 </div>
                 <div class="myHide" id="updates">
                     <h2>Updates - Files, Progress, Problems, etc</h2>
