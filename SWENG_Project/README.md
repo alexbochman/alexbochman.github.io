@@ -6,4 +6,4 @@
 
 <br>
 
-Check out the website [here](https://alexbochman.github.io/SWENG_Project/VS-Saturn-3.html#).
+Check out the project [here](https://alexbochman.github.io/SWENG_Project/VS-Saturn-3.html#).
