@@ -63,9 +63,11 @@ HW 6 - Adding jQuery to Interactive Dynamic Table
 <!-- Assignment information / how to use the page -->
 <div id="info" class="text-center">
     <p class="container">
-        Create a table dynamically based on parameters entered in an HTML form. First,  a form is created that accepts the starting and ending numbers for both the horizontal (multiplier) and vertical (multiplicand) axes of a multiplication table. Second, numbers entered into the form create a multiplication table dynamically. This is what is commonly called a “single page web app” (or application). To start, enter in four numbers within the range of -50 to 50 and then click the "Generate Table" button.
+        Create a table dynamically based on parameters entered in an HTML form. First,  a form is created that accepts the starting and ending numbers for both the horizontal (multiplier) and vertical (multiplicand) axes of a multiplication table. Second, numbers entered into the form create a multiplication table dynamically. This is what is commonly called a “single page web app” (or application). To start, enter in four numbers within the range of -50 to 50 and then click the "Generate Table" button. 
         <br><br>
-        Check out the code for this page on my <a href="https://github.com/alexbochman/alexbochman.github.io/tree/main/Homework/HW6">GitHub</a>.
+        jQuery validation has been added for error checking. It'll help pinpoint when input fields are empty, outside of the range from -50 to 50, and if there are any invalid characters such as letters.
+        <br><br>
+        Check out the code for this page on my <a href="https://github.com/alexbochman/alexbochman.github.io/tree/main/GUI_Assignments/HW6">GitHub</a>.
     </p>
 </div>
 
@@ -102,9 +104,9 @@ HW 6 - Adding jQuery to Interactive Dynamic Table
                 </div>
             </div>
         </form>
-    </div>
-    <div class="container col-xs-12 col-sm-6 text-left">
+        <div class="container col-xs-12 col-sm-6 text-left">
             <button class="btn-lg btn-primary" type="button" onclick="generateTable()">Generate Table</button>
+        </div>
         </div>
         <div class="container col-xs-12 col-sm-6 ">
             <div id="inputX"></div>
