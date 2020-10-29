@@ -18,6 +18,30 @@ ul.text-center{
     color: black;
 }
 
+#sweng {
+    padding-top: 35px;
+}
+
+#vs-saturn-summary {
+    padding-left: 40px;
+}
+
+#vsImg {
+    margin: auto;
+    width: 200px;
+    height: 200px;
+    padding: inherit;
+}
+
+#vsImg:hover {
+    margin: auto;
+    width: 200px;
+    height: 200px;
+    padding: 30px;
+    border: double;
+    border-radius: 100px;
+}
+
 .btn{
     background-color: white !important;
     color: black !important;

@@ -4,27 +4,31 @@ alexander_bochman@student.uml.edu
 
 UMass Lowell Computer Science
 COMP 4610 Section 201 - GUI I Programming
-HW 5 - Creating an Interactive Dynamic Table
-10/22/2020
+HW 6
+10/27/2020
 -->
 
 <!DOCTYPE html>
 <html>
 <head>
-  <title>Alex Bochman's Website - Homework 5</title>
+  <title>Alex Bochman's Website - Homework 6</title>
     
     <meta charset="utf-8"/>
     <meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1, user-scalable=no">
-    
     
     <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/css/bootstrap.min.css">
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
     <link rel="shortcut icon" href="../../files/faviconCoffee2.png" />
     <link href="../../css/style.css" rel="stylesheet" />
-    <link href="./css/Homework5.css" rel="stylesheet" />
+    <link href="./css/Homework6.css" rel="stylesheet" />
     <link href="https://fonts.googleapis.com/css?family=Lato:300,400,700,300italic,400italic,700italic " rel="stylesheet
       " type="text/css">
  
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.5.1/jquery.min.js"></script>
+    <script src="https://cdn.jsdelivr.net/npm/jquery-validation@1.19.2/dist/jquery.validate.min.js"></script>
+    <script src="https://cdn.jsdelivr.net/npm/jquery-validation@1.19.2/dist/additional-methods.min.js"></script>
+    <script src="https://maxcdn.bootstrapcdn.com/bootstrap/4.5.2/js/bootstrap.min.js"></script>
+    
 </head>
 
 <body>
@@ -52,8 +56,8 @@ HW 5 - Creating an Interactive Dynamic Table
 
 <!-- Landing text / descriptor of assignment -->
 <div class="container landing-text text-center">
-    <h1>Homework 5 - JavaScript</h1>
-    <h3>Creating an Interactive Dynamic Table</h3>
+    <h1>Homework 6 - JQuery</h1>
+    <h3>Adding JQuery Validation  Interactive Dynamic Table</h3>
 </div>
     
 <!-- Assignment information / how to use the page -->
@@ -61,28 +65,26 @@ HW 5 - Creating an Interactive Dynamic Table
     <p class="container">
         Create a table dynamically based on parameters entered in an HTML form. First,  a form is created that accepts the starting and ending numbers for both the horizontal (multiplier) and vertical (multiplicand) axes of a multiplication table. Second, numbers entered into the form create a multiplication table dynamically. This is what is commonly called a “single page web app” (or application). To start, enter in four numbers within the range of -50 to 50 and then click the "Generate Table" button.
         <br><br>
-        Check out the code for this page on my <a href="https://github.com/alexbochman/alexbochman.github.io/tree/main/Homework/HW5">GitHub</a>.
+        Check out the code for this page on my <a href="https://github.com/alexbochman/alexbochman.github.io/tree/main/Homework/HW6">GitHub</a>.
     </p>
 </div>
 
 <!-- Form for user input -->
 <div class="container myForm">
     <div class="container row col-md-offset-1">
-        <form class="form-horizontal" action="/action_page.php">
-            
+        <form class="form-horizontal" id="myForm" action="/action_page.php">
+             
             <div class="inputHeader col-xs-12">Please enter x-axis starting and ending number (multiplier).</div>
             
             <div class="form-group container-fluid col-xs-6">
                 <div class="inputField">
-                    <input type="number" class="form-control" id="xStart" min="-50" max="50" placeholder="X-Axis Start" required>
-                    <div class="errorMessage" id="xStartError"></div>
+                    <input type="number" class="form-control" id="xStart" name="xStart" min="-50" max="50" placeholder="X-Axis Start" required>
                 </div>
             </div>
 
             <div class="form-group container col-xs-6">
                 <div class="inputField">
-                    <input type="number" class="form-control" id="xEnd" min="-50" max="50" placeholder="X-Axis End" />
-                    <div class="errorMessage" id="xEndError"></div>
+                    <input type="number" class="form-control" id="xEnd" name="xEnd" min="-50" max="50" placeholder="X-Axis End" required>
                 </div>
             </div>
             
@@ -90,26 +92,24 @@ HW 5 - Creating an Interactive Dynamic Table
             
             <div class="form-group col-xs-6">
                 <div class="inputField">
-                    <input type="number" class="form-control" id="yStart" min="-50" max="50" placeholder="Y-Axis Start" required>
-                    <div class="errorMessage" id="yStartError"></div>
+                    <input type="number" class="form-control" id="yStart" name="yStart" min="-50" max="50" placeholder="Y-Axis Start" required>
                 </div>
             </div>
 
             <div class="form-group col-xs-6">
                 <div class="inputField">
-                    <input type="number" class="form-control" id="yEnd" min="-50" max="50" placeholder="Y-Axis End" required>
-                    <div class="errorMessage" id="yEndError"></div>
+                    <input type="number" class="form-control" id="yEnd" name="yEnd" min="-50" max="50" placeholder="Y-Axis End" required>
                 </div>
             </div>
         </form>
-        <div class="container col-xs-12 col-sm-6 text-left">
+    </div>
+    <div class="container col-xs-12 col-sm-6 text-left">
             <button class="btn-lg btn-primary" type="button" onclick="generateTable()">Generate Table</button>
         </div>
         <div class="container col-xs-12 col-sm-6 ">
             <div id="inputX"></div>
             <div id="inputY"></div>
         </div>
-    </div>
 </div> 
     
 <!-- class "filler" helps with spacing, especially when the table hasn't been generated -->
@@ -143,10 +143,8 @@ HW 5 - Creating an Interactive Dynamic Table
         </div>
     </div>
 </footer>
-
-<script src="./js/Homework5.js"></script>
-<script src="https://ajax.googleapis.com/ajax/libs/jquery/3.2.1/jquery.min.js"></script>
-<script src="https://maxcdn.bootstrapcdn.com/bootstrap/4.5.2/js/bootstrap.min.js"></script>
     
+<script src="./js/Homework6.js"></script>
 </body>
+    
 </html>

@@ -12,6 +12,7 @@ HW 5 - Creating an Interactive Dynamic Table
 // functions to validate the input and then create 
 // the table.
 function generateTable() {
+    
     // Initialization. Input captured from the form
     var xStart = document.getElementById('xStart').value;
     var xEnd = document.getElementById('xEnd').value;
