@@ -32,75 +32,61 @@ HW 5 - Creating an Interactive Dynamic Table
 
 <body>
     <div class="wrapper">
+        
+        <!-- Sidebar Navigation -->
         <div id="mySidenav" class="sidenav">
             <img id="sideNavHeader" src="../files/visual-studio-code.svg" >
             <ul id="navList">
-                <li onclick="showhide('overview')"><a href="#" ><i class="fas fa-home"></i>Overview</a></li>
-                <li onclick="showhide('members')"><a href="#" onclick="showhide('members')"><i class="fas fa-users"></i>Members</a></li>
-                <li onclick="showhide('updates')"><a href="#" ><i class="fas fa-file-alt"></i>Updates</a></li>
-                <li><a href="https://github.com/alexbochman/alexbochman.github.io/tree/main/SWENG_Project"><i class="fab fa-github"></i>GitHub</a></li>
+                
+                <li class="tab" 
+                    id="overviewLI" 
+                    onclick="showhide('overview'); activeTab('overviewLI');">
+                    <a href="#" >
+                        <i class="fas fa-home"></i>
+                        Overview
+                    </a>
+                </li>
+                
+                <li class="tab" 
+                    id="membersLI" 
+                    onclick="showhide('members'); activeTab('membersLI');">
+                    <a href="#">
+                        <i class="fas fa-users"></i>
+                        Members
+                    </a>
+                </li>
+                
+                <li class="tab" 
+                    id="updatesLI" 
+                    onclick="showhide('updates'); activeTab('updatesLI');">
+                    <a href="#" >
+                        <i class="fas fa-file-alt"></i>
+                        Updates
+                    </a>
+                </li>
+                
+                <li>
+                    <a href="https://github.com/alexbochman/alexbochman.github.io/tree/main/SWENG_Project"><i class="fab fa-github"></i>
+                        GitHub
+                    </a>
+                </li>
+                
             </ul> 
             <div class="toggle_button">
               <a href="#" onclick="toggleNav()"><i id="toggleIcon" class="fas fa-angle-double-left"></i> </a>
           </div>
         </div>
 
+        <!-- Main Content. Overview is displayed by default, all other tab conents are hidden. When a tab is clicked, the tab content displays, and all other tab content becomes hidden -->
         <div class="main_content" id="main">
             <div class="header">VS-Saturn 3 </div>
             <div class="info">
                 <div class="myHide" id="overview">
                     <h2 class="text-center">Overview - All Content is a WIP</h2>
                     <h4 class="text-center">Just getting content out here, will be updated, omitted, and organized later.</h4>
-                    <p><br> A Proposal by Noah Mezher <br><br>
-                    The most valuable resource one has is time. Time is money, and there is no way to acquire
-                    more time than the time one is destined to have. How one chooses to spend their time depends on
-                    the person in question, but if productivity is the goal, then one must choose to spend their time wisely.
-                    To manage how much time I spend doing productive tasks, I often employ the Pomodoro technique
-                    of time management. In short, this technique follows a few steps:
-                    
-                    <br><br>
-                        
-                    1. Set a timer for 25 minutes and work on a specific task for that amount of time. <br>
-                        
-                    2. After 25 minutes has elapsed, put a check-mark on a piece of paper. <br>
-                    a. If you have recorded fewer than four check-marks, take a 3-5 minute break. <br>
-                    b. If you reach your fourth check-mark, take a 20-30 minute break. <br>
-        
-                    3. After break time has elapsed, set another timer for 25 minutes and repeat. 
-                        
-                    <br><br>
-                        
-                    This simple technique increases focus on the task at hand and allows down-time for your brain to rest
-                    and re-focus. This solves the problem of staring at work for hours at a time and reduces the risk of
-                    mistakes due to mental fatigue. While the creator of this technique encourages a pencil and paper
-                    methodology with a physical timer, I often find myself in front of my PC while working so I use an
-                    online timer and notepad program to track my pomodoros. As a programmer, I often also find myself
-                    using an IDE (namely, Visual Studio Code) to develop, so my idea aims to streamline the number of
-                    steps it takes to track my time.
-                    If the reader has ever used Visual Studio Code (abbr. to VSCode) then they would know that
-                    it supports the creation of add-ons. 
-                    
-                    <br> <br> 
-                        
-                    Add-ons can be used to change the appearance of the IDE, add
-                    functionality not built-in such as PDF viewing or Intellisense, and is a great way to customize VSCode
-                    to fit your need. My proposal is to build a pomodoro timer for VSCode that will provide task tracking
-                    functionality not offered by any other add-on currently on the marketplace. Other pomodoro timers
-                    have been developed, but the following features that I intend to implement make VS-Saturn the
-                    optimal choice: <br>
-                        
-                    <br>• Snooze button for delaying the end of a work or rest cycle.
-                    <br>• Task checklist for the 25-minute timer and rest timer so you can track progress and set goals.
-                    <br>• Non-intrusive notification for when a timer is up (changes VSCode’s theme from light to dark
-                    and vice versa so that you are not inclined to look at your IDE).
-                    
-                    <br><br>
-                    
-                    All VSCode applications are developed with JavaScript or TypeScript and VS-Saturn is no
-                    exception. Since VS-Saturn is an add-on, it will be contained within the VSCode application and will
-                    not require compilation of an executable. All development and testing can be done within VSCode,
-                    and anything outside of that platform is out of the scope of this application. This add-on will be built
-                    using the VSCode extension API.</p>
+                    <div class="text-center" id="overviewInfo">
+                    A group project for the Software Engineering I course at the University of Massachusetts Lowell. The VS-Saturn 3 team is made up of five members who were assigned the task of creating an extension for Visual Studio Code, a free source-code editor. The idea of the extension stems from the <a href="https://www.youtube.com/watch?v=VFW3Ld7JO0w&ab_channel=CirilloCompany">Pomodoro Technique</a> for time management.
+                    </div>
                 </div>
                 <div class="myHide" id="members">
                     <h2 class="text-center">Meet The Team</h2>
@@ -112,6 +98,9 @@ HW 5 - Creating an Interactive Dynamic Table
                             </p>
                         </div>
                         <div class="memberBlock col-xs-12 col-sm-12 col-md-6" id="alexInfo">
+                            <div class="col-xs-4">
+                                <img class="photo" src="files/alex.jpg">
+                            </div>
                             <h4><b>Alex Bochman</b></h4>
                             <p>I'm a senior studying Computer Science at the University of Massachusetts Lowell. I received my Associate's Degree from Northern Essex Community College in Haverhill Massachusetts, and my tentative plan after graduating is to find a tech company to work for in Boston, MA.<br><br>
 

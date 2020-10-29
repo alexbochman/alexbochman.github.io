@@ -1,5 +1,6 @@
 
 
+// TOGGLE THE NAV BAR (OPEN AND CLOSED)
 var toggleState = "open";
 
 function toggleNav() {
@@ -13,15 +14,7 @@ function toggleNav() {
     }
 }
 
-function mediaToggle() {
-    if (x.matches) { // If media query matches
-        
-    closeNav();
-  } else {
-    openNav();
-  }
-}
-
+// SET THE PROPERTIES AND STYLES WHEN THE NAV BAR OPENS
 function openNav() {
     toggleState = "open";
     var img = document.getElementById("toggleIcon");
@@ -39,6 +32,7 @@ function openNav() {
     
 }
 
+// SET THE PROPERTIES AND STYLES WHEN THE NAV BAR CLOSES
 function closeNav() {
     toggleState = "closed";
     var img = document.getElementById("toggleIcon");
@@ -70,6 +64,29 @@ function closeNav() {
     }
 }
 
+function activeTab(id) {
+    var divid = document.getElementById(id);
+    var divs = document.getElementsByClassName("tab");
+    
+    for(var i=0;i<divs.length;i++) {
+        divs[i].style.backgroundColor = "#34527d";
+    }
+    
+    divid.style.backgroundColor = "#44628d";
+}
+
+
+// FUNCTIONS BELOW SHOWS THE CONTENT OF THE TAB WHEN CLICKED IN THE NAV BAR
+// AND HIDES ALL OTHER CONTENT
+function mediaToggle() {
+    if (x.matches) { // If media query matches
+        
+    closeNav();
+  } else {
+    openNav();
+  }
+}
+
 var x = window.matchMedia("(max-width: 800px)");
 mediaToggle(x); // Call listener function at run time
 x.addListener(mediaToggle); // Attach listener function on state changes
@@ -77,7 +94,6 @@ x.addListener(mediaToggle); // Attach listener function on state changes
 
 function showhide(id){
         if (document.getElementById(id)) {
-            console.log(id);
           var divid = document.getElementById(id);
           var divs = document.getElementsByClassName("myHide");
           for(var i=0;i<divs.length;i++) {
