@@ -4,7 +4,9 @@ html, body {
 }
 
 h1,h2,h3,h4,h5,h6,p,nav, a {
-    font-family: georgia;  
+    font-family: georgia;
+    /*font-family: 'Josefin Sans', sans-serif;*/
+    /*color: #717171;*/
 }
 
 a:hover {

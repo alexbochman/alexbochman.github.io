@@ -126,6 +126,7 @@ body{
 #toggleIcon {
     transition: .5s;
     font-size: 20px;
+    margin-left: 10px;
 }
 
 .rotated-icon {
@@ -140,9 +141,27 @@ body{
     padding: inherit;
 }
 
-.fab {
-    font-size: 20px;
-    margin-right: 20px;
+.fab, .fas {
+    font-size: 25px;
+    margin-right: 10px;
+    margin-left: -5px;
+}
+
+.fa-file-alt {
+    margin-right: 3px;
+    margin: auto;
+}
+
+.info {
+    transition: .5s;
+}
+
+.myHide {
+    display: none;
+}
+
+#overview {
+    display: block
 }
 
 @media (max-width: 800px) {

@@ -39,7 +39,6 @@ function openNav() {
     
 }
 
-
 function closeNav() {
     toggleState = "closed";
     var img = document.getElementById("toggleIcon");
@@ -74,3 +73,27 @@ function closeNav() {
 var x = window.matchMedia("(max-width: 800px)");
 mediaToggle(x); // Call listener function at run time
 x.addListener(mediaToggle); // Attach listener function on state changes
+
+
+function showhide(id){
+        if (document.getElementById(id)) {
+            console.log(id);
+          var divid = document.getElementById(id);
+          var divs = document.getElementsByClassName("myHide");
+          for(var i=0;i<divs.length;i++) {
+             divs[i].style.display = "none";
+          }
+          divid.style.display = "block";
+        } 
+        return false;
+ }
+
+
+
+
+
+
+
+
+
+
