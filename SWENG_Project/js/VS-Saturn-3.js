@@ -29,7 +29,6 @@ function openNav() {
     for (i = 0; i < y.length; i++) {
       y[i].style.visibility = "visible";
     }
-    
 }
 
 // SET THE PROPERTIES AND STYLES WHEN THE NAV BAR CLOSES
@@ -75,6 +74,10 @@ function activeTab(id) {
     divid.style.backgroundColor = "#44628d";
 }
 
+function newTab() { 
+            window.open( 
+              "https://github.com/alexbochman/VS-Saturn-3", "_blank"); 
+        } 
 
 // FUNCTIONS BELOW SHOWS THE CONTENT OF THE TAB WHEN CLICKED IN THE NAV BAR
 // AND HIDES ALL OTHER CONTENT
