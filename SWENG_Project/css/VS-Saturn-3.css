@@ -129,11 +129,28 @@
 .photo {
     width: 100%;
     margin-top: 10px;
+    margin-bottom: -20px;
     border: double;
     border-color: gray; 
 }
 
-/* DOCUMENTS ================================================================= */
+/* UPDATES ================================================================= */
+
+.updateBlock {
+    background-color: white;
+    height: 400px;
+
+    overflow: auto;
+}
+
+.sticky {
+    position: -webkit-sticky; /* Safari */
+    position: sticky;
+    top: 0;
+    z-index: 2;
+    background-color: white;
+    padding: 15px;
+}
 
 /* EVERYTHING ELSE ================================================================= */
 
