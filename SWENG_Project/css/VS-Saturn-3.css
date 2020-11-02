@@ -231,10 +231,13 @@ body{
   margin-left: 0px;
 }
 
+/* SCROLL BAR ================================================================= */
+
 * {
   scrollbar-width: thin;
   scrollbar-color: blue orange;
 }
+
 *::-webkit-scrollbar {
   width: 12px;
 }
@@ -245,6 +248,7 @@ body{
   background-color: gray;
   border-radius: 20px;
   border: 3px solid white;
+    
 }
 
 
