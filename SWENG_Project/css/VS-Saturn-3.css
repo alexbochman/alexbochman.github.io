@@ -134,6 +134,19 @@
     border-color: gray; 
 }
 
+.linksDiv {
+    margin-top: 20px;
+    padding-top: 10px;
+}
+
+.linksDiv a {
+    padding: 20px;
+}
+
+.linksDiv .fab, .linksDiv .fas {
+    font-size: 30px;
+}
+
 /* UPDATES ================================================================= */
 
 .updateBlock {
@@ -250,7 +263,6 @@ body{
   border: 3px solid white;
     
 }
-
 
 /* MEDIA QUERIES ================================================================= */
 
