@@ -139,8 +139,8 @@
 .updateBlock {
     background-color: white;
     height: 400px;
-
     overflow: auto;
+    border: solid 1px;
 }
 
 .sticky {
@@ -150,6 +150,20 @@
     z-index: 2;
     background-color: white;
     padding: 15px;
+    margin-top: -10px;
+}
+
+.classWithPad { margin:10px; padding:10px; }
+
+#filesBlock {
+    width: 49%;
+    margin-left: 2%;
+}
+
+#releaseNotes {
+    margin-right: 0px;
+    width: 49%;
+    
 }
 
 /* EVERYTHING ELSE ================================================================= */
@@ -217,6 +231,21 @@ body{
   margin-left: 0px;
 }
 
+* {
+  scrollbar-width: thin;
+  scrollbar-color: blue orange;
+}
+*::-webkit-scrollbar {
+  width: 12px;
+}
+*::-webkit-scrollbar-track {
+  background: white;
+}
+*::-webkit-scrollbar-thumb {
+  background-color: gray;
+  border-radius: 20px;
+  border: 3px solid white;
+}
 
 
 /* MEDIA QUERIES ================================================================= */
@@ -240,5 +269,20 @@ body{
     width: 150px;
     height: 150px;
     margin-left: 25px;
+    }
+   
+}
+
+@media (max-width: 1000px) {
+    
+    #filesBlock {
+        width: 100%;
+        margin-left: 0px;
+    }
+
+    #releaseNotes {
+        margin-right: 0px;
+        width: 100%;
+
     }
 }
