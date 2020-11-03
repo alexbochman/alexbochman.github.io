@@ -228,9 +228,9 @@
 .resources { 
     border-bottom: 1px solid #e0e4e8; 
     padding-top: 5px; 
-    color: black; 
-    
 }
+
+.resources a:hover { color: black; }
 
 hr { border: 1px solid; }
 
