@@ -109,6 +109,18 @@ function showhide(id){
 
 
 
+// UPDATES SECTION ===============================================================
+
+function rotateChevron(id) {
+    var chevron = document.getElementById(id);
+    
+    if(chevron.classList.contains("rotatedChevron")) 
+        chevron.setAttribute("class", "fas fa-chevron-right");
+    else
+        chevron.setAttribute("class", "fas fa-chevron-right rotatedChevron");
+}
+
+
 
 
 
