@@ -210,8 +210,6 @@
     border-style: none !important;
     white-space: normal !important;
     outline: none !important;
-    padding-bottom: 0px;
-    margin-bottom: 20px;
 }
 
 .fa-chevron-right {
@@ -224,6 +222,10 @@
     transition: .3s;
     -webkit-transform: rotate(90deg);
           transform: rotate(90deg);
+}
+
+.releaseHead {
+    border-bottom: 1px solid #e0e4e8; 
 }
 
 .releaseNotesSub:hover { color: #717171 }
