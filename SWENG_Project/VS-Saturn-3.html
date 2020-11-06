@@ -276,18 +276,35 @@ HW 5 - Creating an Interactive Dynamic Table
                         <div class="classWithPad">
                             <h4 class="text-center sticky">Release Notes</h4>
                             
-                            <!-- Version 0.1 -->
+                            <!-- Version 0.5.1 -->
                             <div class="releaseHead">
-                                
                                 <button type="button" 
                                         class="btn btn-info" 
                                         data-toggle="collapse" 
-                                        data-target="#demo" onclick="rotateChevron('version0.1')">
+                                        data-target="#v051" onclick="rotateChevron('version0.5.1')">
+                                    
+                                        <h4 class="releaseNotesSub">Version 0.5.1 - Starting The Timer &nbsp; <span><i class="fas fa-chevron-right" id="version0.5.1"></i></span></h4>
+                                </button>
+
+                                <div id="v051" class="collapse">
+                                    <p class="indent">
+                                        Started creating the timer. Added buttons and functionality behind the buttons to start/pause the timer, reset the timer, skip the current break, and snooze (add 5 minutes to the running timer). Additionally, started working on a "non-intrusive" way to show whether the timer is on "break time" (switch to light theme) or on "running time" (switch to dark theme).
+                                    </p>
+
+                                </div>
+                            </div>
+                            
+                            <!-- Version 0.1 -->
+                            <div class="releaseHead">
+                                <button type="button" 
+                                        class="btn btn-info" 
+                                        data-toggle="collapse" 
+                                        data-target="#v01" onclick="rotateChevron('version0.1')">
                                     
                                         <h4 class="releaseNotesSub">Version 0.1 - First Extension Test &nbsp; <span><i class="fas fa-chevron-right" id="version0.1"></i></span></h4>
                                 </button>
 
-                                <div id="demo" class="collapse">
+                                <div id="v01" class="collapse">
                                     <p class="indent">
                                         First iteration of the VS-Saturn extension. Simply uses Microsoft's VS Code API to output two different types of messages to the screen: a basic text message and an alert message. 
                                         <br><br>
