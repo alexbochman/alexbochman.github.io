@@ -226,7 +226,11 @@
 
 .releaseHead {
     border-bottom: 1px solid #e0e4e8; 
+    margin-bottom: 0px !important;
 }
+
+
+
 
 .releaseNotesSub:hover { color: #717171 }
 
