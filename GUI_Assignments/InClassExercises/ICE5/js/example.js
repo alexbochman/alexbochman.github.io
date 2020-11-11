@@ -36,7 +36,7 @@ function addNumItems() {
     var one = document.getElementById("one");
     var ul = one.parentNode;
     var numItems = ul.getElementsByTagName("li").length;
-    
+
     var header = document.getElementsByTagName("h2")[0];
     header.innerHTML = header.innerHTML + "<span>" + numItems + "</span>";
 }

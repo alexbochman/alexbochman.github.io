@@ -12,7 +12,7 @@ HW 5 - Creating an Interactive Dynamic Table
 // functions to validate the input and then create 
 // the table.
 function generateTable() {
-    
+
     // Initialization. Input captured from the form
     var xStart = document.getElementById('xStart').value;
     var xEnd = document.getElementById('xEnd').value;
@@ -24,25 +24,25 @@ function generateTable() {
     var table = document.getElementById("dynamicTable");
     var row = table.insertRow();
     var cell = row.insertCell();
-    
+
     // Clear the table and any error messages
     table.innerHTML ="";
     xStartError.innerHTML = "";
     xEndError.innerHTML = "";
     yStartError.innerHTML = "";
     yEndError.innerHTML = "";
-    
+
     // Check input validity, and display errors if necessary
     isValid(xStart, xStartError);
     isValid(xEnd, xEndError);
     isValid(yStart, yStartError);
     isValid(yEnd, yEndError);
-    
+
     // Only create the table if all four input values are valid
     if (isValid(xStart, xStartError) 
-       && isValid(xEnd, xEndError)
-       && isValid(yStart, yStartError)
-       && isValid(yEnd, yEndError)) {
+        && isValid(xEnd, xEndError)
+        && isValid(yStart, yStartError)
+        && isValid(yEnd, yEndError)) {
         createTable(Math.round(xStart), Math.round(xEnd), Math.round(yStart), Math.round(yEnd), table, row, cell);
     }
     return;   
@@ -53,7 +53,7 @@ function generateTable() {
 // nested for loop, the first cell of each 
 // row is styled to denote the multiplicand column.
 function createTable(xMin,xMax,yMin,yMax,table,row,cell){
-    
+
     // If the xStart input is > xEnd input, swap
     if(xMin > xMax) {
         temp = xMin;
@@ -67,12 +67,12 @@ function createTable(xMin,xMax,yMin,yMax,table,row,cell){
         yMin = yMax;
         yMax = temp;
     }
-    
+
     var inputX = document.getElementById("inputX");
     var inputY = document.getElementById("inputY");
     inputX.innerHTML = "X-Axis Start = " + xMin + " |  X-Axis End = " + xMax;
     inputY.innerHTML = "Y-Axis Start = " + yMin + " |  Y-Axis End = " + yMax;
-    
+
     row = table.insertRow();
     cell = row.insertCell();
     cell.innerHTML = "x";
@@ -82,7 +82,7 @@ function createTable(xMin,xMax,yMin,yMax,table,row,cell){
         cell = row.insertCell();
         cell.innerHTML = i;
     }
-    
+
     for (var i = yMin; i <= yMax; i++) {
         row = table.insertRow();
         // First cell for y header

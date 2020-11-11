@@ -10,7 +10,7 @@
         <link rel="stylesheet" href="./css/old_index.css" type="text/css">
         <link rel="stylesheet" href="./css/old_main.css" type="text/css">
         <link rel="stylesheet" href="https://use.fontawesome.com/releases/v5.6.3/css/all.css"
-            integrity="sha384-UHRtZLI+pbxtHCWp1t77Bi1L4ZtiqrqD80Kn4Z8NTSRyMA2Fd33n5dQ8lWUE00s/" crossorigin="anonymous">
+              integrity="sha384-UHRtZLI+pbxtHCWp1t77Bi1L4ZtiqrqD80Kn4Z8NTSRyMA2Fd33n5dQ8lWUE00s/" crossorigin="anonymous">
 
         <!-- Embedded JS for my assignemnts button in the navigation section. From W3 https://www.w3schools.com/w3css/w3css_dropdowns.asp  -->
         <script>
@@ -18,46 +18,46 @@
             toggle between hiding and showing the dropdown content */
             function assignmentsClick()
             {
-              document.getElementById("assignmentsDropDown").classList.toggle("show");
+                document.getElementById("assignmentsDropDown").classList.toggle("show");
             }
 
             function exercisesClick()
             {
-              document.getElementById("inClassExercisesDropDown").classList.toggle("show");
+                document.getElementById("inClassExercisesDropDown").classList.toggle("show");
             }
 
             // Close the dropdown menu if the user clicks outside of it
             window.onclick = function(event)
             {
-              if (!event.target.matches('.dropbtn'))
-              {
-                var dropdowns = document.getElementsByClassName("dropdown-content");
-                var i;
-                for (i = 0; i < dropdowns.length; i++)
+                if (!event.target.matches('.dropbtn'))
                 {
-                  var openDropdown = dropdowns[i];
-                  if (openDropdown.classList.contains('show'))
-                  {
-                    openDropdown.classList.remove('show');
-                  }
+                    var dropdowns = document.getElementsByClassName("dropdown-content");
+                    var i;
+                    for (i = 0; i < dropdowns.length; i++)
+                    {
+                        var openDropdown = dropdowns[i];
+                        if (openDropdown.classList.contains('show'))
+                        {
+                            openDropdown.classList.remove('show');
+                        }
+                    }
                 }
-              }
             }
         </script>
 
         <!--[if lt IE 9]>
-        <script src="http://html5shim.goolecode.com/svn/trunk/html5.js">
-        </script>
-        <![endif]-->
+<script src="http://html5shim.goolecode.com/svn/trunk/html5.js">
+</script>
+<![endif]-->
     </head>
 
     <body>
         <!-- #wrapper Initializes my pages to the standards I set in main.css -->
         <div id="wrapper">
             <header class="HomeHeader">
-                    <h1 class="myTitle" title="Skateboarding Home Header" style="text-align:center">
-                        <b ><i>Alex Bochman <br> UML CS - GUI Programming I</i></b>
-                    </h1>
+                <h1 class="myTitle" title="Skateboarding Home Header" style="text-align:center">
+                    <b ><i>Alex Bochman <br> UML CS - GUI Programming I</i></b>
+                </h1>
             </header>
 
             <!-- navigation on my home page -->
@@ -66,24 +66,24 @@
                 <a class="navColor" href="#">About Me</a> &nbsp;
 
                 <div class="dropdown">
-                  <button onclick="assignmentsClick()" class="dropbtn">Assignments &nbsp;
-                      <i class="arrow"></i>
-                  </button>
-                  <div id="assignmentsDropDown" class="dropdown-content">
-                    <a class="dropdownColor" href="#">Homework 3</a>
-                    <a class="dropdownColor" href="#">Coming Soon...</a>
-                    <a class="dropdownColor" href="#">Coming Soon...</a>
-                  </div>
+                    <button onclick="assignmentsClick()" class="dropbtn">Assignments &nbsp;
+                        <i class="arrow"></i>
+                    </button>
+                    <div id="assignmentsDropDown" class="dropdown-content">
+                        <a class="dropdownColor" href="#">Homework 3</a>
+                        <a class="dropdownColor" href="#">Coming Soon...</a>
+                        <a class="dropdownColor" href="#">Coming Soon...</a>
+                    </div>
                 </div>
 
                 <div class="dropdown2">
-                  <button onclick="exercisesClick()" class="dropbtn">In Class Exercises &nbsp;
-                      <i class="arrow"></i>
-                  </button>
-                  <div id="inClassExercisesDropDown" class="dropdown-content">
-                    <a class="dropdownColor" href="#">Exercise 1</a>
-                    <a class="dropdownColor" href="#">Exercise 2</a>
-                  </div>
+                    <button onclick="exercisesClick()" class="dropbtn">In Class Exercises &nbsp;
+                        <i class="arrow"></i>
+                    </button>
+                    <div id="inClassExercisesDropDown" class="dropdown-content">
+                        <a class="dropdownColor" href="#">Exercise 1</a>
+                        <a class="dropdownColor" href="#">Exercise 2</a>
+                    </div>
                 </div>
 
             </nav>

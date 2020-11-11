@@ -64,7 +64,7 @@ ul.text-center{
     box-shadow: 3px 3px 6px #aaa !important;
 }
 
- .btn:focus, .btn:hover {
+.btn:focus, .btn:hover {
     background-color: white !important;
     border-style: 0 !important;
     outline: 1px !important;
@@ -90,7 +90,7 @@ ul.text-center{
     height: 40%;
     width: 100%;
     display: table;
-    
+
 }
 
 #introText {

@@ -17,7 +17,7 @@ body
     text-align: center;
     min-width: 720px;
     max-width: 940px;
-    
+
 }
 
 
@@ -54,7 +54,7 @@ a
 a:hover { color: red; }
 .on {color: red; }
 
- p
+p
 {
     margin: auto;
     padding-top: 20px;

@@ -65,8 +65,8 @@ footer {
 
 /* Error message styling when for input validation */
 .errorMessage {
-  font-size: 12px;
-  color: red;
+    font-size: 12px;
+    color: red;
 }
 
 /* Table formatting / styling */
@@ -76,7 +76,7 @@ footer {
     margin-left: auto;
     margin-right: auto;
     margin-top: 0px;
-    
+
 }
 
 #table-wrapper {
@@ -92,10 +92,10 @@ td:first-child {
     background-color: #888;
     color: black;
     font-weight: bold;
-     position: -webkit-sticky;
-  position: sticky;
-  left: -20px;
-  z-index: 1;
+    position: -webkit-sticky;
+    position: sticky;
+    left: -20px;
+    z-index: 1;
 }
 
 tr:first-child > td {
@@ -111,17 +111,17 @@ tr:first-child > td {
 /* Table zebra stripes */
 tr:nth-child(odd) {
     background-color: #eee !important;
-    
+
 }
 
 @media (max-width: 500px) {
     #table-wrapper {
-    height: auto;
-    overflow: auto;
-    max-height: 550px;
-    width: 340px;
+        height: auto;
+        overflow: auto;
+        max-height: 550px;
+        width: 340px;
     }
-    
+
     footer {
         margin-top: 50px;
     }

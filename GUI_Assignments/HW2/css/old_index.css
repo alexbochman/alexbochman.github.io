@@ -19,7 +19,7 @@
 /* Home page "second column." List of classes */
 #classList
 {
-    
+
     text-align: center;
     width: 50%;
     padding-top: 0px;
@@ -77,8 +77,8 @@ h1.myTitle
 {
     background-image: url(../images/skate-header.jpg);
     background-repeat: no-repeat;
-	background-size: 100%;
-	height: 450px;
+    background-size: 100%;
+    height: 450px;
     font-size: 40px;
     padding-top: 35%;
 }

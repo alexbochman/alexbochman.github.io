@@ -10,416 +10,416 @@ HW 5 - Creating an Interactive Dynamic Table
 
 <!DOCTYPE html>
 <html>
-<head>
-  <title>VS Saturn 3 Project Page</title>
-    
-    <meta charset="utf-8"/>
-    <meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1, user-scalable=no">
-   
-   
-    
-    <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/css/bootstrap.min.css">
-    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
-    <link rel="shortcut icon" href="../../files/faviconCoffee2.png" />
-    <link href="../css/style.css" rel="stylesheet" />
-    <link href="./css/VS-Saturn-3.css" rel="stylesheet" />
-    <link href="https://fonts.googleapis.com/css?family=Lato:300,400,700,300italic,400italic,700italic " rel="stylesheet
-      " type="text/css">
- 
-</head>
+    <head>
+        <title>VS Saturn 3 Project Page</title>
 
-<body>
-    <div class="wrapper">
-        
-        <!-- Sidebar Navigation -->
-        <div id="mySidenav" class="sidenav">
-            <img id="sideNavHeader" src="../files/visual-studio-code.svg" >
-            <ul id="navList">
-                
-                <li class="tab" 
-                    id="overviewLI" 
-                    onclick="showhide('overview'); activeTab('overviewLI');">
-                    <a href="#" >
-                        <i class="fas fa-home"></i>
-                        Overview
-                    </a>
-                </li>
-                
-                <li class="tab" 
-                    id="membersLI" 
-                    onclick="showhide('members'); activeTab('membersLI');">
-                    <a href="#">
-                        <i class="fas fa-users"></i>
-                        Members
-                    </a>
-                </li>
-                
-                <li class="tab" 
-                    id="updatesLI" 
-                    onclick="showhide('updates'); activeTab('updatesLI');">
-                    <a href="#" >
-                        <i class="fas fa-file-alt"></i>
-                        Updates
-                    </a>
-                </li>
-                
-                <li id="github" onclick="newTab()">
-                    <a href="#"><i class="fab fa-github"></i>
-                        GitHub
-                    </a>
-                </li>
-                
-            </ul> 
-            <div class="toggle_button">
-              <a onclick="toggleNav()"><i id="toggleIcon" class="fas fa-angle-double-left"></i> </a>
-          </div>
-        </div>
+        <meta charset="utf-8"/>
+        <meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1, user-scalable=no">
 
-        <!-- Main Content. Overview is displayed by default, all other tab conents are hidden. When a tab is clicked, the tab content displays, and all other tab content becomes hidden -->
-        <div class="main_content" id="main">
-            <div class="header">VS-Saturn 3 </div>
-            <div class="info">
-               
-                <!-- OVERVIEW -->
-                <div class="myHide" id="overview">
-                    <h2 class="text-center padding">Overview</h2>
-                    
-                    <div class="text-center col-xs-12" id="overviewInfo">
-                    <b>Synopsis</b> <br>
-                    A group project for the Software Engineering I course at the University of Massachusetts Lowell. The VS-Saturn 3 team is made up of five members who were assigned the task of creating an extension for Visual Studio Code, a free source-code editor. The idea of the extension stems from the <a href="https://www.youtube.com/watch?v=VFW3Ld7JO0w&ab_channel=CirilloCompany" target="_blank">Pomodoro Technique</a> for time management.<br><br>
-                    
-                    <b>About VS Code</b><br>
-                    VS Code is a free source code editor where developers can edit, build, and debug code with ease. This is largely due to the fact that there are many features available to VS Code. Many of the features are available by default, but there are many more that can be downloaded and installed for free within VS Code, or at <a href="https://marketplace.visualstudio.com/VSCode">Microsoft's Marketplace</a>. Not only can people install extensions, but developers can create their own and upload them to the marketplace for free. That's exactly what the VS-Saturn 3 team has been assigned to do; create and upload a public extension with the best software engineering practices in mind. <br><br>
-                        
-                    <b>VS-Saturn Extension</b><br>
-                    The extension is based off of a simple idea, the Pomodoro Technique.<br><br>
-                    <ol>
-                        <li>1. Set a timer for 25 minutes and work on a specific task for that amount of time.</li>
-                        <li>2. After 25 minutes has elapsed, put a check-mark on a piece of paper.</li>
-                        <ol>
-                            <li>a. If you have recorded fewer than four check-marks, take a 3-5 minute break.</li>
-                            <li>b. If you reach your fourth check-mark, take a 20-30 minute break.</li>
-                        </ol>
-                        <li>3. After break time has elapsed, set another timer for 25 minutes and repeat.</li>
-                    </ol>
-                    Our objective is to take this technique, and turn it into an intuitive extension that anyone can download and use quickly and effectively. The extension is planned to have features such as: a snooze button, a 25-minute timer, a task checklist to track progress and set goals, and a non-intrusive notification for when the timer is up. Learn more by clicking on the "Updates" tab in the navigation side bar.
 
-                    </div>
+
+        <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/css/bootstrap.min.css">
+        <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
+        <link rel="shortcut icon" href="../../files/faviconCoffee2.png" />
+        <link href="../css/style.css" rel="stylesheet" />
+        <link href="./css/VS-Saturn-3.css" rel="stylesheet" />
+        <link href="https://fonts.googleapis.com/css?family=Lato:300,400,700,300italic,400italic,700italic " rel="stylesheet
+                                                                                                                  " type="text/css">
+
+    </head>
+
+    <body>
+        <div class="wrapper">
+
+            <!-- Sidebar Navigation -->
+            <div id="mySidenav" class="sidenav">
+                <img id="sideNavHeader" src="../files/visual-studio-code.svg" >
+                <ul id="navList">
+
+                    <li class="tab" 
+                        id="overviewLI" 
+                        onclick="showhide('overview'); activeTab('overviewLI');">
+                        <a href="#" >
+                            <i class="fas fa-home"></i>
+                            Overview
+                        </a>
+                    </li>
+
+                    <li class="tab" 
+                        id="membersLI" 
+                        onclick="showhide('members'); activeTab('membersLI');">
+                        <a href="#">
+                            <i class="fas fa-users"></i>
+                            Members
+                        </a>
+                    </li>
+
+                    <li class="tab" 
+                        id="updatesLI" 
+                        onclick="showhide('updates'); activeTab('updatesLI');">
+                        <a href="#" >
+                            <i class="fas fa-file-alt"></i>
+                            Updates
+                        </a>
+                    </li>
+
+                    <li id="github" onclick="newTab()">
+                        <a href="#"><i class="fab fa-github"></i>
+                            GitHub
+                        </a>
+                    </li>
+
+                </ul> 
+                <div class="toggle_button">
+                    <a onclick="toggleNav()"><i id="toggleIcon" class="fas fa-angle-double-left"></i> </a>
                 </div>
-                
-                <!-- MEMBERS -->
-                <div class="myHide" id="members">
-                    <h2 class="text-center padding">Meet The Team</h2>
-                    <br>
-                    
-                    <!-- Team Info & Alex Row -->
-                    <div class="row col-xs-12"> 
-                        
-                         <!-- Team Info Member Block -->
-                        <div class="memberBlock col-xs-12 col-sm-12 col-md-6" id="teamInfo">
-                            
-                            
-                            <div id="teamInfo">
-                                <h4 class="col-xs-12"><b>Team Info</b></h4>
-                                <p class="indent">The VS-Saturn 3 team is composed of five members who have been working together since their junior year in college. The team has a solid foundation in object oriented programming using the C++ and Java languages. Additionally, there's a wide range of skills that include information security, information technology, database management, web development, computer graphics, and software engineering.</p>
-                            </div>
+            </div>
+
+            <!-- Main Content. Overview is displayed by default, all other tab conents are hidden. When a tab is clicked, the tab content displays, and all other tab content becomes hidden -->
+            <div class="main_content" id="main">
+                <div class="header">VS-Saturn 3 </div>
+                <div class="info">
+
+                    <!-- OVERVIEW -->
+                    <div class="myHide" id="overview">
+                        <h2 class="text-center padding">Overview</h2>
+
+                        <div class="text-center col-xs-12" id="overviewInfo">
+                            <b>Synopsis</b> <br>
+                            A group project for the Software Engineering I course at the University of Massachusetts Lowell. The VS-Saturn 3 team is made up of five members who were assigned the task of creating an extension for Visual Studio Code, a free source-code editor. The idea of the extension stems from the <a href="https://www.youtube.com/watch?v=VFW3Ld7JO0w&ab_channel=CirilloCompany" target="_blank">Pomodoro Technique</a> for time management.<br><br>
+
+                            <b>About VS Code</b><br>
+                            VS Code is a free source code editor where developers can edit, build, and debug code with ease. This is largely due to the fact that there are many features available to VS Code. Many of the features are available by default, but there are many more that can be downloaded and installed for free within VS Code, or at <a href="https://marketplace.visualstudio.com/VSCode">Microsoft's Marketplace</a>. Not only can people install extensions, but developers can create their own and upload them to the marketplace for free. That's exactly what the VS-Saturn 3 team has been assigned to do; create and upload a public extension with the best software engineering practices in mind. <br><br>
+
+                            <b>VS-Saturn Extension</b><br>
+                            The extension is based off of a simple idea, the Pomodoro Technique.<br><br>
+                            <ol>
+                                <li>1. Set a timer for 25 minutes and work on a specific task for that amount of time.</li>
+                                <li>2. After 25 minutes has elapsed, put a check-mark on a piece of paper.</li>
+                                <ol>
+                                    <li>a. If you have recorded fewer than four check-marks, take a 3-5 minute break.</li>
+                                    <li>b. If you reach your fourth check-mark, take a 20-30 minute break.</li>
+                                </ol>
+                                <li>3. After break time has elapsed, set another timer for 25 minutes and repeat.</li>
+                            </ol>
+                            Our objective is to take this technique, and turn it into an intuitive extension that anyone can download and use quickly and effectively. The extension is planned to have features such as: a snooze button, a 25-minute timer, a task checklist to track progress and set goals, and a non-intrusive notification for when the timer is up. Learn more by clicking on the "Updates" tab in the navigation side bar.
 
                         </div>
-                        
-                         <!-- Alex Bochman Member Block -->
-                        <div class="memberBlock col-xs-12 col-sm-12 col-md-6" id="alexInfo">
-                            
-                            <div class="col-xs-6 col-lg-4">
-                                <img class="photo" src="files/alex.png">
+                    </div>
+
+                    <!-- MEMBERS -->
+                    <div class="myHide" id="members">
+                        <h2 class="text-center padding">Meet The Team</h2>
+                        <br>
+
+                        <!-- Team Info & Alex Row -->
+                        <div class="row col-xs-12"> 
+
+                            <!-- Team Info Member Block -->
+                            <div class="memberBlock col-xs-12 col-sm-12 col-md-6" id="teamInfo">
+
+
+                                <div id="teamInfo">
+                                    <h4 class="col-xs-12"><b>Team Info</b></h4>
+                                    <p class="indent">The VS-Saturn 3 team is composed of five members who have been working together since their junior year in college. The team has a solid foundation in object oriented programming using the C++ and Java languages. Additionally, there's a wide range of skills that include information security, information technology, database management, web development, computer graphics, and software engineering.</p>
+                                </div>
+
                             </div>
+
+                            <!-- Alex Bochman Member Block -->
+                            <div class="memberBlock col-xs-12 col-sm-12 col-md-6" id="alexInfo">
+
+                                <div class="col-xs-6 col-lg-4">
+                                    <img class="photo" src="files/alex.png">
+                                </div>
 
                                 <h4><b>Alex Bochman</b></h4>
                                 <b>Manager / Full Stack Developer</b>
                                 <p>I'm a senior studying Computer Science at the University of Massachusetts Lowell. I received my Associate's Degree from Northern Essex Community College in Haverhill Massachusetts, and my tentative plan after graduating is to find a tech company to work for in Boston, MA.<br><br>
 
-                                I'm interested in software engineering and UI/UX development. I like building things from the ground up and seeing the results of my work, and being able to share it with others. Additionally, I strive to produce code that's clean and efficient. Learn more about me and my work below.
+                                    I'm interested in software engineering and UI/UX development. I like building things from the ground up and seeing the results of my work, and being able to share it with others. Additionally, I strive to produce code that's clean and efficient. Learn more about me and my work below.
                                 </p>
 
                                 <div class="col-xs-12 text-center linksDiv">
-                                        <a href="mailto:alexander_bochman@student.uml.edu" title="Email Alex"><i class="fas fa-envelope"></i></a>
+                                    <a href="mailto:alexander_bochman@student.uml.edu" title="Email Alex"><i class="fas fa-envelope"></i></a>
 
-                                        <a href="https://www.linkedin.com/in/alexander-bochman-25137014a/" target="_blank" title="Alex's LinkedIn"><i class="fab fa-linkedin"></i></a>
+                                    <a href="https://www.linkedin.com/in/alexander-bochman-25137014a/" target="_blank" title="Alex's LinkedIn"><i class="fab fa-linkedin"></i></a>
 
-                                        <a href="https://github.com/alexbochman" target="_blank" title="Alex's GitHub"> <i class="fab fa-github"></i></a>
+                                    <a href="https://github.com/alexbochman" target="_blank" title="Alex's GitHub"> <i class="fab fa-github"></i></a>
 
-                                        <a href="https://alexbochman.github.io/" title="Alex's Personal Website" target="_blank"><i class="fas fa-link"></i></a>
+                                    <a href="https://alexbochman.github.io/" title="Alex's Personal Website" target="_blank"><i class="fas fa-link"></i></a>
                                 </div>
 
-                            <!-- Substitute Icons with this list of links? -->
-                            <!--
-                            <ul>
-                                <li><strong>Email:</strong><a href="mailto:alexander_bochman@student.uml.edu"> alexander_bochman@student.uml.edu</a></li>
-                                
-
-                                <li><strong>GitHub:</strong><a href="https://github.com/alexbochman" target="_blank"> https://github.com/alexbochman</a></li>
-                                
-                                <li><strong>LinkedIn:</strong><a href="https://www.linkedin.com/in/alexander-bochman-25137014a/" target="_blank"> www.linkedin.com/in/alexander-bochman</a></li>
-                                
-                                <li><strong>Personal Website:</strong><a href="https://alexbochman.github.io/" target="_blank"> https://alexbochman.github.io/</a></li>
-                            </ul>
-                            -->
-                            
-        
-                        </div>
-                        
-                    </div>
-                    
-                    <!-- Luann & Michael Row -->
-                    <div class="row col-xs-12"> 
-                        
-                        <!-- Luann Dias Member Block -->
-                        <div class="memberBlock col-xs-12 col-sm-12 col-md-6" id="">
-                            <div class="col-xs-6 col-lg-4">
-                                <img class="photo" src="files/luann.png">
-                            </div>
-                            <h4><b>Luann Dias</b></h4>
-                            <b>Full Stack Developer</b>
-                            <p>Experienced Information Technology Consultant with a demonstrated history of working in the information technology and services industry. Skilled in Computer Network Operations, Customer Service, Banking, IT Consulting, and Information Technology. 
-                            <br><br>
-                            Looking to find Entry-Level Software Engineering or Mobile Application Development positions after graduation. Strong information technology professional with an anticipated Bachelor's degree focused in Computer Science from University of Massachusetts Lowell.
-                            </p>
-                            
-                            <div class="col-xs-12 text-center linksDiv">
-                                <a href="mailto:luann_dias@student.uml.edu" title="Email Luann"> <i class="fas fa-envelope"></i></a>
-                                
-                                <a href="https://www.linkedin.com/in/luann-dias-7b445a172/" target="_blank" title="Luann's LinkedIn"><i class="fab fa-linkedin"></i></a>
-                                
-                                <a href="https://github.com/LDias97" target="_blank" title="Luann's GitHub">  <i class="fab fa-github"></i></a>
-                            </div>
-                        </div>
-                        
-                        <!-- Michael Gonzales Member Block -->
-                        <div class="memberBlock col-xs-12 col-sm-12 col-md-6" id="alexInfo">
-                            <div class="col-xs-6 col-lg-4">
-                                <img class="photo" src="files/michael.png">
-                            </div>
-                            <h4><b>Michael Gonzales</b></h4>
-                            <b>Full Stack Developer</b>
-                            <p>I'm a senior at the University of Massachusetts Lowell studying computer science. I have recieved my Associates in Science in Computer Science from Middlesex Community College in Bedford Massachusetts. My tentative plan after graduation in 2021 is to work for a software engineering company in either Boston, MA or Cincinnati, OH.
-                            <br><br>
-                            I'm interested in software engineering and game development. I like to see the fruits of my labor visibly and watch others enjoy my product. I strive to make code that's efficient, logical, and have a long term plan for my projects. Learn more about me and my work below
-                            </p>
-                            
-                            <div class="col-xs-12 text-center linksDiv">
-                                <a href="mailto:michael_gonzales@student.uml.edu" title="Email Michael"> <i class="fas fa-envelope"></i></a>
-                                
-                                <a href="https://www.linkedin.com/in/luann-dias-7b445a172/" target="_blank" title="Michael's LinkedIn"><i class="fab fa-linkedin"></i></a>
-                                
-                                <a href="https://github.com/mdgonzales1998" target="_blank" title="GitHub">  <i class="fab fa-github" title="Michael's GitHub"></i></a>
-                            </div>
-
-                        </div>
-                        
-                    </div>
-                    
-                    <!-- Dominic & Derek Row -->
-                    <div class="row col-xs-12"> 
-                        
-                        <!-- Dominic Gordon Member Block -->
-                        <div class="memberBlock col-xs-12 col-sm-12 col-md-6" id="dominicInfo">
-                            <div class="col-xs-6 col-lg-4">
-                                <img class="photo" src="files/dominic.png">
-                            </div>
-                            <h4><b>Dominic Gordon</b></h4>
-                            <b>Full Stack Developer</b>
-                            <p>I’m a senior Computer Science student at the University of Massachusetts Lowell. I also received my associate’s degree from Northern Essex Community College in Haverhill Massachusetts. 
-                            <br><br>
-                            I’m mainly interested in Software Engineering and UI/UX design, and want to, at some point in the future, work in game development. For now, however, I just want to find a job somewhere near Boston, MA to get my foot in the door.
-                            </p>  
-                            
-                            <div class="col-xs-12 text-center linksDiv">
-                                <a href="mailto:domx9200@gmail.com"><i class="fas fa-envelope" title="Email Dominic"></i></a>
-                                
-                                <a href=" https://github.com/domx9200" target="_blank" title="Dominic's GitHub"> <i class="fab fa-github"></i></a>
-                                
-                                <a href="https://domx9200.github.io/" target="_blank" title="Dominic's Personal Website"><i class="fas fa-link"></i></a>
-                            </div>
-                            
-                        </div>
-
-                        <!-- Derek Lamoreaux Member Block -->
-                        <div class="memberBlock col-xs-12 col-sm-12 col-md-6" id="derekInfo">
-                            <div class="col-xs-6 col-lg-4">
-                                <img class="photo" src="files/derek.png">
-                            </div>
-                            <h4><b>Derek Lamoreaux</b></h4>
-                            <b>Full Stack Developer</b>
-                            <p>Senior at University of Massachusetts Lowell studying Computer Science and Mathematics with anticipated graduation spring 2021. I received an Associate’s Degree in CS from Middlesex Community College. After graduation I’ll be looking for an intro level programming position to get my coding chops up and get a taste for real world applications. 
-                            <br><br>                                
-                            Interested in audio processing software development and any job that allows me to travel. I also have a cat named Bert. Bert is a good boy.
-                            </p>
-                            
-                            <div class="col-xs-12 text-center linksDiv">
-                                <a href="mailto:derek_lamoreaux@student.uml.edu" title="Email Derek"> <i class="fas fa-envelope"></i></a>
-                                
-                                <a href="https://www.linkedin.com/in/derek-lamoreaux/" target="_blank" title="Derek's LinkedIn"><i class="fab fa-linkedin"></i></a>
-                                
-                                <a href="https://github.com/derkl0" target="_blank" title="GitHub">  <i class="fab fa-github" title="Derek's GitHub"></i></a>
-                            </div>
-                            
-                        </div>
-
-                    </div>
-                </div>
-                
-                <!-- UPDATES -->
-                <div class="myHide" id="updates">
-                    
-                    <h2 class="text-center padding">Updates</h2>
-                                        
-                    <div class="updateBlock col-xs-12 col-md-6" id="releaseNotes">
-                        <div class="classWithPad">
-                            <h4 class="text-center sticky">Release Notes</h4>
-                            
-                            <!-- Version 0.5.1 -->
-                            <div class="releaseHead">
-                                <button type="button" 
-                                        class="btn btn-info" 
-                                        data-toggle="collapse" 
-                                        data-target="#v051" onclick="rotateChevron('version0.5.1')">
-                                    
-                                        <h4 class="releaseNotesSub">Version 0.5.1 - Starting The Timer &nbsp; <span><i class="fas fa-chevron-right" id="version0.5.1"></i></span></h4>
-                                </button>
-
-                                <div id="v051" class="collapse">
-                                    <p class="indent">
-                                        Started creating the timer. Added buttons and functionality behind the buttons to start/pause the timer, reset the timer, skip the current break, and snooze (add 5 minutes to the running timer). Additionally, started working on a "non-intrusive" way to show whether the timer is on "break time" (switch to light theme) or on "running time" (switch to dark theme).
-                                    </p>
-
-                                </div>
-                            </div>
-                            
-                            
-                            
-                            <!-- Version 0.1 -->
-                            <div class="releaseHead">
-                                <button type="button" 
-                                        class="btn btn-info" 
-                                        data-toggle="collapse" 
-                                        data-target="#v01" onclick="rotateChevron('version0.1')">
-                                    
-                                        <h4 class="releaseNotesSub">Version 0.1 - First Extension Test &nbsp; <span><i class="fas fa-chevron-right" id="version0.1"></i></span></h4>
-                                </button>
-
-                                <div id="v01" class="collapse">
-                                    <p class="indent">
-                                        First iteration of the VS-Saturn extension. Simply uses Microsoft's VS Code API to output two different types of messages to the screen: a basic text message and an alert message. 
-                                        <br><br>
-                                        You can check out the extension on VS Code by:
-                                    </p>
-
-                                    <ol class="indent">
-                                        <li>1. Opening the extensions tab on VS Code</li>
-                                        <li>2. Search "UmlCs" (No spaces, case sensitive)</li>
-                                        <li>3. Install</li>
-                                        <li>4. Open the command pallet by clicking view at the top of the screen or Ctrl+Shift+P</li>
-                                        <li>5. Type "What's Up World!" Hit Enter.</li>
-                                    </ol>
-                                </div>
-                            </div>
-                            
-                        </div>
-                    </div>
-                    
-                    <div class="updateBlock col-xs-12 col-md-6" id="filesBlock">
-                        <div class="classWithPad" >
-                            <h4 class="text-center sticky">Documents</h4>
-                            
-                            <ol>
-                                <li class="pdf indent">
-                                    <a id="pdf-download" href="./files/VS-Saturn%20Proposal.pdf" target="_blank">
-                                    <h4><i class="far fa-file-pdf"></i> Original Project Description</h4>
-                                    </a>
-                                </li>
-                                
-                                <li class="pdf indent">
-                                    <a id="pdf-download" href="./files/VS-Saturn3-_Requirements_List.pdf" target="_blank">
-                                    <h4><i class="far fa-file-pdf"></i> Requirements List</h4>
-                                    </a>
-                                </li>
-                                
-                                <li class="pdf indent">
-                                    <a id="pdf-download" href="./files/VS-Saturn3-Use-Case-Diagram.pdf" target="_blank">
-                                    <h4><i class="far fa-file-pdf"></i> Use Case Diagram</h4>
-                                    </a>
-                                </li>
-                                
-                                <li class="pdf indent">
-                                    <a id="pdf-download" href="./files/VS-Saturn%20Q&A.pdf" target="_blank">
-                                    <h4><i class="far fa-file-pdf"></i> VS-Saturn Q&amp;A</h4>
-                                    </a>
-                                </li>
-                                
-                                <!-- Private document links below. Only people with
-                                     access to the GitHub repository can access
-                                     the files. -->
+                                <!-- Substitute Icons with this list of links? -->
                                 <!--
-                                <li class="pdf">
-                                    <a id="pdf-download" href="https://github.com/alexbochman/Protected-SWENG-Files/blob/main/VS-Saturn%20Proposal.pdf" target="_blank">
-                                    <h4><i class="far fa-file-pdf"></i> [PRIVATE TESTING] Original Project Description</h4>
-                                    </a>
-                                </li>
-                                
-                                <li class="pdf">
-                                    <a id="pdf-download" href="https://github.com/alexbochman/Protected-SWENG-Files/blob/main/VS-Saturn3-_Requirements_List.pdf" target="_blank">
-                                    <h4><i class="far fa-file-pdf"></i> [PRIVATE TESTING] Requirements List</h4>
-                                    </a>
-                                </li>
-                                
-                                <li class="pdf">
-                                    <a id="pdf-download" href="https://github.com/alexbochman/Protected-SWENG-Files/blob/main/VS-Saturn3-Use-Case-Diagram.pdf" target="_blank">
-                                    <h4><i class="far fa-file-pdf"></i> [PRIVATE TESTING] Use Case Diagram</h4>
-                                    </a>
-                                </li>
-                                
-                                <li class="pdf">
-                                    <a id="pdf-download" href="https://github.com/alexbochman/Protected-SWENG-Files/blob/main/VS-Saturn%20Q%26A.pdf" target="_blank">
-                                    <h4><i class="far fa-file-pdf"></i> [PRIVATE TESTING] VS-Saturn Q&amp;A</h4>
-                                    </a>
-                                </li>
-                                -->
-                                
-                            </ol>
+<ul>
+<li><strong>Email:</strong><a href="mailto:alexander_bochman@student.uml.edu"> alexander_bochman@student.uml.edu</a></li>
 
-                        </div> 
+
+<li><strong>GitHub:</strong><a href="https://github.com/alexbochman" target="_blank"> https://github.com/alexbochman</a></li>
+
+<li><strong>LinkedIn:</strong><a href="https://www.linkedin.com/in/alexander-bochman-25137014a/" target="_blank"> www.linkedin.com/in/alexander-bochman</a></li>
+
+<li><strong>Personal Website:</strong><a href="https://alexbochman.github.io/" target="_blank"> https://alexbochman.github.io/</a></li>
+</ul>
+-->
+
+
+                            </div>
+
+                        </div>
+
+                        <!-- Luann & Michael Row -->
+                        <div class="row col-xs-12"> 
+
+                            <!-- Luann Dias Member Block -->
+                            <div class="memberBlock col-xs-12 col-sm-12 col-md-6" id="">
+                                <div class="col-xs-6 col-lg-4">
+                                    <img class="photo" src="files/luann.png">
+                                </div>
+                                <h4><b>Luann Dias</b></h4>
+                                <b>Full Stack Developer</b>
+                                <p>Experienced Information Technology Consultant with a demonstrated history of working in the information technology and services industry. Skilled in Computer Network Operations, Customer Service, Banking, IT Consulting, and Information Technology. 
+                                    <br><br>
+                                    Looking to find Entry-Level Software Engineering or Mobile Application Development positions after graduation. Strong information technology professional with an anticipated Bachelor's degree focused in Computer Science from University of Massachusetts Lowell.
+                                </p>
+
+                                <div class="col-xs-12 text-center linksDiv">
+                                    <a href="mailto:luann_dias@student.uml.edu" title="Email Luann"> <i class="fas fa-envelope"></i></a>
+
+                                    <a href="https://www.linkedin.com/in/luann-dias-7b445a172/" target="_blank" title="Luann's LinkedIn"><i class="fab fa-linkedin"></i></a>
+
+                                    <a href="https://github.com/LDias97" target="_blank" title="Luann's GitHub">  <i class="fab fa-github"></i></a>
+                                </div>
+                            </div>
+
+                            <!-- Michael Gonzales Member Block -->
+                            <div class="memberBlock col-xs-12 col-sm-12 col-md-6" id="alexInfo">
+                                <div class="col-xs-6 col-lg-4">
+                                    <img class="photo" src="files/michael.png">
+                                </div>
+                                <h4><b>Michael Gonzales</b></h4>
+                                <b>Full Stack Developer</b>
+                                <p>I'm a senior at the University of Massachusetts Lowell studying computer science. I have recieved my Associates in Science in Computer Science from Middlesex Community College in Bedford Massachusetts. My tentative plan after graduation in 2021 is to work for a software engineering company in either Boston, MA or Cincinnati, OH.
+                                    <br><br>
+                                    I'm interested in software engineering and game development. I like to see the fruits of my labor visibly and watch others enjoy my product. I strive to make code that's efficient, logical, and have a long term plan for my projects. Learn more about me and my work below
+                                </p>
+
+                                <div class="col-xs-12 text-center linksDiv">
+                                    <a href="mailto:michael_gonzales@student.uml.edu" title="Email Michael"> <i class="fas fa-envelope"></i></a>
+
+                                    <a href="https://www.linkedin.com/in/luann-dias-7b445a172/" target="_blank" title="Michael's LinkedIn"><i class="fab fa-linkedin"></i></a>
+
+                                    <a href="https://github.com/mdgonzales1998" target="_blank" title="GitHub">  <i class="fab fa-github" title="Michael's GitHub"></i></a>
+                                </div>
+
+                            </div>
+
+                        </div>
+
+                        <!-- Dominic & Derek Row -->
+                        <div class="row col-xs-12"> 
+
+                            <!-- Dominic Gordon Member Block -->
+                            <div class="memberBlock col-xs-12 col-sm-12 col-md-6" id="dominicInfo">
+                                <div class="col-xs-6 col-lg-4">
+                                    <img class="photo" src="files/dominic.png">
+                                </div>
+                                <h4><b>Dominic Gordon</b></h4>
+                                <b>Full Stack Developer</b>
+                                <p>I’m a senior Computer Science student at the University of Massachusetts Lowell. I also received my associate’s degree from Northern Essex Community College in Haverhill Massachusetts. 
+                                    <br><br>
+                                    I’m mainly interested in Software Engineering and UI/UX design, and want to, at some point in the future, work in game development. For now, however, I just want to find a job somewhere near Boston, MA to get my foot in the door.
+                                </p>  
+
+                                <div class="col-xs-12 text-center linksDiv">
+                                    <a href="mailto:domx9200@gmail.com"><i class="fas fa-envelope" title="Email Dominic"></i></a>
+
+                                    <a href=" https://github.com/domx9200" target="_blank" title="Dominic's GitHub"> <i class="fab fa-github"></i></a>
+
+                                    <a href="https://domx9200.github.io/" target="_blank" title="Dominic's Personal Website"><i class="fas fa-link"></i></a>
+                                </div>
+
+                            </div>
+
+                            <!-- Derek Lamoreaux Member Block -->
+                            <div class="memberBlock col-xs-12 col-sm-12 col-md-6" id="derekInfo">
+                                <div class="col-xs-6 col-lg-4">
+                                    <img class="photo" src="files/derek.png">
+                                </div>
+                                <h4><b>Derek Lamoreaux</b></h4>
+                                <b>Full Stack Developer</b>
+                                <p>Senior at University of Massachusetts Lowell studying Computer Science and Mathematics with anticipated graduation spring 2021. I received an Associate’s Degree in CS from Middlesex Community College. After graduation I’ll be looking for an intro level programming position to get my coding chops up and get a taste for real world applications. 
+                                    <br><br>                                
+                                    Interested in audio processing software development and any job that allows me to travel. I also have a cat named Bert. Bert is a good boy.
+                                </p>
+
+                                <div class="col-xs-12 text-center linksDiv">
+                                    <a href="mailto:derek_lamoreaux@student.uml.edu" title="Email Derek"> <i class="fas fa-envelope"></i></a>
+
+                                    <a href="https://www.linkedin.com/in/derek-lamoreaux/" target="_blank" title="Derek's LinkedIn"><i class="fab fa-linkedin"></i></a>
+
+                                    <a href="https://github.com/derkl0" target="_blank" title="GitHub">  <i class="fab fa-github" title="Derek's GitHub"></i></a>
+                                </div>
+
+                            </div>
+
+                        </div>
                     </div>
-                    
-                    <div class="updateBlock col-xs-12 ">
-                        <div class="classWithPad">
-                            <h4 class="text-center sticky">Resources &amp; Web Links </h4>
-                            <ul>
-                                <li class="resources indent"> 
-                                    <a href="https://lowell.umassonline.net/webapps/Bb-wiki-BBLEARN/wikiView?course_id=_19767_1&group_id=_32651_1" target="_blank"><h4>(VS-Saturn Team Only) BlackBoard Wiki</h4></a>
-                                </li>
-                                <li class="resources indent"> 
-                                    <a href="https://code.visualstudio.com/api/get-started/your-first-extension" target="_blank"><h4>VS Code Extensions - Getting Started</h4></a>
-                                </li>
-                                <li class="resources indent">
-                                    <a href="https://nodejs.org/en/about/" target="_blank"><h4>About Node.js</h4></a>
-                                </li>
-                                <li class="resources indent">
-                                    <a href="https://dev.azure.com/UML-CS-Homies" target="_blank"><h4>Azure Active Directory</h4></a>
-                                </li>
-                                <li class="resources indent">
-                                    <a href="https://marketplace.visualstudio.com/VSCode" target="_blank"><h4>Microsoft Marketplace (Download Extension Here)</h4></a>
-                                </li>
-                            </ul>
+
+                    <!-- UPDATES -->
+                    <div class="myHide" id="updates">
+
+                        <h2 class="text-center padding">Updates</h2>
+
+                        <div class="updateBlock col-xs-12 col-md-6" id="releaseNotes">
+                            <div class="classWithPad">
+                                <h4 class="text-center sticky">Release Notes</h4>
+
+                                <!-- Version 0.5.1 -->
+                                <div class="releaseHead">
+                                    <button type="button" 
+                                            class="btn btn-info" 
+                                            data-toggle="collapse" 
+                                            data-target="#v051" onclick="rotateChevron('version0.5.1')">
+
+                                        <h4 class="releaseNotesSub">Version 0.5.1 - Starting The Timer &nbsp; <span><i class="fas fa-chevron-right" id="version0.5.1"></i></span></h4>
+                                    </button>
+
+                                    <div id="v051" class="collapse">
+                                        <p class="indent">
+                                            Started creating the timer. Added buttons and functionality behind the buttons to start/pause the timer, reset the timer, skip the current break, and snooze (add 5 minutes to the running timer). Additionally, started working on a "non-intrusive" way to show whether the timer is on "break time" (switch to light theme) or on "running time" (switch to dark theme).
+                                        </p>
+
+                                    </div>
+                                </div>
+
+
+
+                                <!-- Version 0.1 -->
+                                <div class="releaseHead">
+                                    <button type="button" 
+                                            class="btn btn-info" 
+                                            data-toggle="collapse" 
+                                            data-target="#v01" onclick="rotateChevron('version0.1')">
+
+                                        <h4 class="releaseNotesSub">Version 0.1 - First Extension Test &nbsp; <span><i class="fas fa-chevron-right" id="version0.1"></i></span></h4>
+                                    </button>
+
+                                    <div id="v01" class="collapse">
+                                        <p class="indent">
+                                            First iteration of the VS-Saturn extension. Simply uses Microsoft's VS Code API to output two different types of messages to the screen: a basic text message and an alert message. 
+                                            <br><br>
+                                            You can check out the extension on VS Code by:
+                                        </p>
+
+                                        <ol class="indent">
+                                            <li>1. Opening the extensions tab on VS Code</li>
+                                            <li>2. Search "UmlCs" (No spaces, case sensitive)</li>
+                                            <li>3. Install</li>
+                                            <li>4. Open the command pallet by clicking view at the top of the screen or Ctrl+Shift+P</li>
+                                            <li>5. Type "What's Up World!" Hit Enter.</li>
+                                        </ol>
+                                    </div>
+                                </div>
+
+                            </div>
+                        </div>
+
+                        <div class="updateBlock col-xs-12 col-md-6" id="filesBlock">
+                            <div class="classWithPad" >
+                                <h4 class="text-center sticky">Documents</h4>
+
+                                <ol>
+                                    <li class="pdf indent">
+                                        <a id="pdf-download" href="./files/VS-Saturn%20Proposal.pdf" target="_blank">
+                                            <h4><i class="far fa-file-pdf"></i> Original Project Description</h4>
+                                        </a>
+                                    </li>
+
+                                    <li class="pdf indent">
+                                        <a id="pdf-download" href="./files/VS-Saturn3-_Requirements_List.pdf" target="_blank">
+                                            <h4><i class="far fa-file-pdf"></i> Requirements List</h4>
+                                        </a>
+                                    </li>
+
+                                    <li class="pdf indent">
+                                        <a id="pdf-download" href="./files/VS-Saturn3-Use-Case-Diagram.pdf" target="_blank">
+                                            <h4><i class="far fa-file-pdf"></i> Use Case Diagram</h4>
+                                        </a>
+                                    </li>
+
+                                    <li class="pdf indent">
+                                        <a id="pdf-download" href="./files/VS-Saturn%20Q&A.pdf" target="_blank">
+                                            <h4><i class="far fa-file-pdf"></i> VS-Saturn Q&amp;A</h4>
+                                        </a>
+                                    </li>
+
+                                    <!-- Private document links below. Only people with
+access to the GitHub repository can access
+the files. -->
+                                    <!--
+<li class="pdf">
+<a id="pdf-download" href="https://github.com/alexbochman/Protected-SWENG-Files/blob/main/VS-Saturn%20Proposal.pdf" target="_blank">
+<h4><i class="far fa-file-pdf"></i> [PRIVATE TESTING] Original Project Description</h4>
+</a>
+</li>
+
+<li class="pdf">
+<a id="pdf-download" href="https://github.com/alexbochman/Protected-SWENG-Files/blob/main/VS-Saturn3-_Requirements_List.pdf" target="_blank">
+<h4><i class="far fa-file-pdf"></i> [PRIVATE TESTING] Requirements List</h4>
+</a>
+</li>
+
+<li class="pdf">
+<a id="pdf-download" href="https://github.com/alexbochman/Protected-SWENG-Files/blob/main/VS-Saturn3-Use-Case-Diagram.pdf" target="_blank">
+<h4><i class="far fa-file-pdf"></i> [PRIVATE TESTING] Use Case Diagram</h4>
+</a>
+</li>
+
+<li class="pdf">
+<a id="pdf-download" href="https://github.com/alexbochman/Protected-SWENG-Files/blob/main/VS-Saturn%20Q%26A.pdf" target="_blank">
+<h4><i class="far fa-file-pdf"></i> [PRIVATE TESTING] VS-Saturn Q&amp;A</h4>
+</a>
+</li>
+-->
+
+                                </ol>
+
+                            </div> 
+                        </div>
+
+                        <div class="updateBlock col-xs-12 ">
+                            <div class="classWithPad">
+                                <h4 class="text-center sticky">Resources &amp; Web Links </h4>
+                                <ul>
+                                    <li class="resources indent"> 
+                                        <a href="https://lowell.umassonline.net/webapps/Bb-wiki-BBLEARN/wikiView?course_id=_19767_1&group_id=_32651_1" target="_blank"><h4>(VS-Saturn Team Only) BlackBoard Wiki</h4></a>
+                                    </li>
+                                    <li class="resources indent"> 
+                                        <a href="https://code.visualstudio.com/api/get-started/your-first-extension" target="_blank"><h4>VS Code Extensions - Getting Started</h4></a>
+                                    </li>
+                                    <li class="resources indent">
+                                        <a href="https://nodejs.org/en/about/" target="_blank"><h4>About Node.js</h4></a>
+                                    </li>
+                                    <li class="resources indent">
+                                        <a href="https://dev.azure.com/UML-CS-Homies" target="_blank"><h4>Azure Active Directory</h4></a>
+                                    </li>
+                                    <li class="resources indent">
+                                        <a href="https://marketplace.visualstudio.com/VSCode" target="_blank"><h4>Microsoft Marketplace (Download Extension Here)</h4></a>
+                                    </li>
+                                </ul>
+                            </div>
                         </div>
                     </div>
                 </div>
             </div>
         </div>
-    </div>
 
-    <script src="./js/VS-Saturn-3.js"></script>
-     <script src="https://kit.fontawesome.com/b99e675b6e.js"></script>
-    <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.2.1/jquery.min.js"></script>
-    <script src="https://maxcdn.bootstrapcdn.com/bootstrap/4.5.2/js/bootstrap.min.js"></script>
+        <script src="./js/VS-Saturn-3.js"></script>
+        <script src="https://kit.fontawesome.com/b99e675b6e.js"></script>
+        <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.2.1/jquery.min.js"></script>
+        <script src="https://maxcdn.bootstrapcdn.com/bootstrap/4.5.2/js/bootstrap.min.js"></script>
 
-</body>
+    </body>
 </html>

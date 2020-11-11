@@ -10,7 +10,7 @@ h1,h2,h3,h4,h5,h6,p,nav, a {
 }
 
 a:hover {
-   text-decoration: none;
+    text-decoration: none;
 }
 
 .navbar {
@@ -23,7 +23,7 @@ a:hover {
 .navbar-brand {
     min-height: 55px;
     padding: 0 15px 5px;
-    
+
 }
 
 .navbar-default .navbar-nav li a {
@@ -52,7 +52,7 @@ footer {
     width: 100%;
     background-color: #34527d;
     padding: 5% 5% 10% 5%;
-    
+
     color: #FFF;
     text-align: center;
 }
@@ -83,24 +83,24 @@ footer {
 }
 
 * {
-  scrollbar-width: thin;
-  scrollbar-color: blue orange;
+    scrollbar-width: thin;
+    scrollbar-color: blue orange;
 }
 
 *::-webkit-scrollbar {
-  width: 12px;
+    width: 12px;
     height: 1em;
 }
 
 *::-webkit-scrollbar-track {
-  background: white;
-    
+    background: white;
 }
+
 *::-webkit-scrollbar-thumb {
-  background-color: gray;
-  border-radius: 20px;
-  border: 3px solid white;
-    
+    background-color: gray;
+    border-radius: 20px;
+    border: 3px solid white;
+
 }
 
 @media (max-width: 768px) {
@@ -108,19 +108,19 @@ footer {
     .landing-text h1 {
         font-size: 300%;
     }
-    
+
     footer h3 {
         margin-top: 30px;
         margin-bottom: -20px;
     }
-    
+
     .icon {
         padding-top: 5%;
         max-width: 100px;
     }
-    
+
     .navbar ul {
         text-align: center;
     }
-    
+
 }

@@ -1,19 +1,19 @@
 :root {
-  --theme-main: #2d2e7b;
+    --theme-main: #2d2e7b;
 }
 
 body {
-  font-family: 'Lato', 'Helvetica Neue', Helvetica, Arial, sans-serif;
-  background-color:#f8f9fa!important;
+    font-family: 'Lato', 'Helvetica Neue', Helvetica, Arial, sans-serif;
+    background-color:#f8f9fa!important;
 }
 
 .desktop-header{
-  padding-top: 11rem;
-  padding-bottom: 6rem;
+    padding-top: 11rem;
+    padding-bottom: 6rem;
 }
 
 .mobile-header{
-  padding-top: 4rem;
+    padding-top: 4rem;
 }
 
 h1,
@@ -22,20 +22,20 @@ h3,
 h4,
 h5,
 h6 {
-  font-family: 'Lato', 'Helvetica Neue', Helvetica, Arial, sans-serif;
-  font-weight: 700;
+    font-family: 'Lato', 'Helvetica Neue', Helvetica, Arial, sans-serif;
+    font-weight: 700;
 }
 
 .bg-theme{
-  background-color:var(--theme-main)
+    background-color:var(--theme-main)
 }
 
 .text-theme{
-  color:#34527d;
+    color:#34527d;
 }
 a.text-theme:focus,
 a.text-theme:hover{
-  color:#34527d;
+    color:#34527d;
 }
 
 .nav-link.nav-menu-link {
@@ -51,8 +51,8 @@ a.text-theme:hover{
 }
 
 .nav-link.nav-resume-link#pdf-download {
-  color: #fff;
-  background-color: #34527d;
+    color: #fff;
+    background-color: #34527d;
 }
 
 .nav-link.nav-resume-link#pdf-download:hover {
@@ -64,48 +64,48 @@ a.text-theme:hover{
 }
 
 .anchor{
-  display: block;
-  height: 6rem;
-  margin-top: -6rem;
-  visibility: hidden;
+    display: block;
+    height: 6rem;
+    margin-top: -6rem;
+    visibility: hidden;
 }
 
 .home-icons {
-  padding-top: 0rem;
+    padding-top: 0rem;
 }
 
 .home-icon-no-underline:hover {
-  text-decoration: none;
+    text-decoration: none;
 }
 
 .features-icons {
-  padding-top: 2rem;
-  padding-bottom: 2rem;
+    padding-top: 2rem;
+    padding-bottom: 2rem;
 }
 
 .features-icons .features-icons-item {
-  max-width: 20rem;
+    max-width: 20rem;
 }
 
 .features-icons .features-icons-item .features-icons-icon {
-  height: 7rem;
+    height: 7rem;
 }
 
 .features-icons .features-icons-item .features-icons-icon i {
-  font-size: 4.5rem;
+    font-size: 4.5rem;
 }
 
 .features-icons .features-icons-item:hover .features-icons-icon i {
-  font-size: 5rem;
+    font-size: 5rem;
 }
 
 .icons-hover-link:hover {
-  text-decoration: none;
+    text-decoration: none;
 }
 
 
 .card{
-      margin-bottom: 1rem;
+    margin-bottom: 1rem;
 }
 
 .card-header {
@@ -117,7 +117,7 @@ a.text-theme:hover{
 }
 
 .resume{
-  padding-top: 4rem;
+    padding-top: 4rem;
 }
 
 .contact{
@@ -127,12 +127,12 @@ a.text-theme:hover{
 blockquote {
     border-left: 2px solid #ccc;
     padding: 0.5em 10px;
-  }
+}
 
 
 footer.footer {
-  padding-top: 4rem;
-  padding-bottom: 4rem;
+    padding-top: 4rem;
+    padding-bottom: 4rem;
 }
 
 .navbar {
@@ -144,21 +144,21 @@ footer.footer {
 }
 
 .navbar ul {
-        text-align: center;
-    }
+    text-align: center;
+}
 
 * {
-  scrollbar-width: thin;
-  scrollbar-color: blue orange;
+    scrollbar-width: thin;
+    scrollbar-color: blue orange;
 }
 *::-webkit-scrollbar {
-  width: 12px;
+    width: 12px;
 }
 *::-webkit-scrollbar-track {
-  background: white;
+    background: white;
 }
 *::-webkit-scrollbar-thumb {
-  background-color: gray;
-  border-radius: 20px;
-  border: 3px solid white;
+    background-color: gray;
+    border-radius: 20px;
+    border: 3px solid white;
 }
