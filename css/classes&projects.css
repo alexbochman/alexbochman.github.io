@@ -101,6 +101,12 @@ ul.text-center{
     padding-bottom: 100px;
 }
 
+.personal-btn { !important;}
+
+#personalText {
+    margin: 30px;
+}
+
 .filler {
     margin-top: 30px;
 }
