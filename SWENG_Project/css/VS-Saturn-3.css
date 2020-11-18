@@ -181,7 +181,8 @@ Light gray web page font color: #717171
     top: 0;
     z-index: 2;
     padding: 15px;
-    margin-top: -10px;
+    border-top: solid 20px;
+    margin-top: -15px;
     margin-bottom: 15px;
     background-color: #44628d;
     color: white;
