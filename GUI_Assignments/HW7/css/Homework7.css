@@ -1,0 +1,129 @@
+/*
+Alex Bochman
+alexander_bochman@student.uml.edu
+
+UMass Lowell Computer Science
+COMP 4610 Section 201 - GUI I Programming
+HW 6 - Adding jQuery to Interactive Dynamic Table
+10/29/2020
+*/
+
+.landing-text {
+    margin-top: 100px;
+}
+
+p {
+    font-size: 16px;
+    padding-top: 10px;
+    padding-bottom: 10px;
+    margin-top: 20px;
+    margin-bottom: 10px;
+    border-top: double;
+    border-bottom: double;
+}
+
+/* Helps with spacing while the table isn't generated*/
+.filler {
+    padding-bottom: 30px;
+}
+
+/* Input form */
+.myForm{
+    padding-top: 30px;
+    padding-bottom: 30px;
+    background-color: #fcf8f2;
+    border: double;
+}
+
+/* Text to show what the user input */
+#inputX, #inputY {
+    font-weight: bold;
+    padding-right: 0px;
+}
+
+/* Instructions above the input field */
+.inputHeader {
+    font-weight: bold
+}
+
+.inputField {
+    max-width: 300px;
+    padding-left: 10px;
+}
+
+.btn-primary {
+    background-color: #34527d;
+}
+
+table {
+    text-align: center; 
+}
+
+footer {
+    margin-top: 50px;
+}
+
+/* Error message styling when for input validation */
+.error {
+    font-style: italic;
+    font-weight: normal;
+    color: red;
+}
+
+/* Table formatting / styling */
+#table-container {
+    margin-top: 50px;
+    overflow: visible;
+    margin-left: auto;
+    margin-right: auto;
+    margin-top: 0px;
+
+}
+
+#table-wrapper {
+    height: auto;
+    overflow: auto;
+    max-height: 550px;
+}
+
+
+
+/*Table header and row styles*/
+td:first-child {
+    background-color: #888;
+    color: black;
+    font-weight: bold;
+    position: -webkit-sticky;
+    position: sticky;
+    left: -20px;
+    z-index: 1;
+}
+
+tr:first-child > td {
+    background-color: #888;
+    color: black;
+    font-weight: bold;
+    position: -webkit-sticky;
+    position: sticky;
+    top: -5px;
+    z-index: 2;
+}
+
+/* Table zebra stripes */
+tr:nth-child(odd) {
+    background-color: #eee !important;
+
+}
+
+@media (max-width: 500px) {
+    #table-wrapper {
+        height: auto;
+        overflow: auto;
+        max-height: 550px;
+        width: 340px;
+    }
+
+    footer {
+        margin-top: 50px;
+    }
+}
