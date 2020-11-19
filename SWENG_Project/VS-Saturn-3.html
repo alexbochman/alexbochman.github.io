@@ -261,6 +261,25 @@ HW 5 - Creating an Interactive Dynamic Table
                             <div class="classWithPad">
                                 <h4 class="text-center sticky">Release Notes</h4>
 
+                                <!-- Version 0.6.0 -->
+                                <div class="releaseHead">
+                                    <button type="button" 
+                                            class="btn btn-info" 
+                                            data-toggle="collapse" 
+                                            data-target="#v060" onclick="rotateChevron('version0.6.0')">
+
+                                        <h4 class="releaseNotesSub">Version 0.6.0 - Task List Skeleton &nbsp; <span><i class="fas fa-chevron-right" id="version0.6.0"></i></span></h4>
+                                    </button>
+
+                                    <div id="v060" class="collapse">
+                                        <p class="indent">
+                                            Added a task list button and the prototype for what the task list will look like when the button is clicked. Additionally, made modifications to the color theme toggle when breaks are started and ended. Now, the VS Code theme will invert its "kind" value when a break is toggled, effectively switching the theme regardless of what the user has set. This ensures that there will be a noticible difference when a theme is toggled. 
+                                        </p>
+
+                                    </div>
+                                </div>
+
+                                
                                 <!-- Version 0.5.1 -->
                                 <div class="releaseHead">
                                     <button type="button" 
@@ -294,17 +313,7 @@ HW 5 - Creating an Interactive Dynamic Table
                                     <div id="v01" class="collapse">
                                         <p class="indent">
                                             First iteration of the VS-Saturn extension. Simply uses Microsoft's VS Code API to output two different types of messages to the screen: a basic text message and an alert message. 
-                                            <br><br>
-                                            You can check out the extension on VS Code by:
                                         </p>
-
-                                        <ol class="indent">
-                                            <li>1. Opening the extensions tab on VS Code</li>
-                                            <li>2. Search "UmlCs" (No spaces, case sensitive)</li>
-                                            <li>3. Install</li>
-                                            <li>4. Open the command pallet by clicking view at the top of the screen or Ctrl+Shift+P</li>
-                                            <li>5. Type "What's Up World!" Hit Enter.</li>
-                                        </ol>
                                     </div>
                                 </div>
 
@@ -355,6 +364,12 @@ HW 5 - Creating an Interactive Dynamic Table
                                     <li class="pdf indent">
                                         <a id="pdf-download" href="./files/VS-Saturn3-Sequence-Diagram-2.pdf" target="_blank">
                                             <h4><i class="far fa-file-pdf"></i> Sequence Diagram 2</h4>
+                                        </a>
+                                    </li>
+                                    
+                                    <li class="pdf indent">
+                                        <a id="pdf-download" href="./files/VS-Saturn3-SRS.pdf" target="_blank">
+                                            <h4><i class="far fa-file-pdf"></i> Software Requirements Specification (SRS)</h4>
                                         </a>
                                     </li>
                                </ol>
