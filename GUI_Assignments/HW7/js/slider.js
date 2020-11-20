@@ -1,6 +1,6 @@
 
 // jQuery Slider functions
-// xStartingNum
+// xStart
 $(document).ready(function(){
     $(function() {
         $("#xStartSlider").slider({
@@ -8,10 +8,11 @@ $(document).ready(function(){
             max: 50,
             slide: function( event, ui ) {
                 $( "#xStart" ).val( ui.value );
+                
             }
         });
     });
-    // xEndingNum
+    // xEnd
     $(function() {
         $("#xEndSlider" ).slider({
             min: -50,
@@ -21,7 +22,7 @@ $(document).ready(function(){
             }
         });
     });
-    // yStartingNum
+    // yStart
     $(function() {
         $( "#yStartSlider" ).slider({
             min: -50,
@@ -31,7 +32,7 @@ $(document).ready(function(){
             }
         });
     });
-    // yEndingNum
+    // yEnd
     $(function() {
         $( "#yEndSlider" ).slider({
             min: -50,

@@ -115,6 +115,24 @@ footer {
     outline: none;
 }
 
+#tableTabs{
+  margin-top: 50px;
+  overflow: auto;
+  margin-left: auto;
+  margin-right: auto;
+}
+
+table {
+  list-style: none;
+	float: left;
+	position: relative;
+	top: 0;
+	margin: 1px .2em 0 0;
+	border-bottom-width: 0;
+	padding: 0;
+	white-space: nowrap;
+}
+
 @media (max-width: 768px) {
 
     .landing-text h1 {

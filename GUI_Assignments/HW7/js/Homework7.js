@@ -10,7 +10,7 @@ HW 6 - Adding jQuery to Interactive Dynamic Table
 
 // Validation Plugin
 // Check if its not empty and is a number
-$().ready(function(){
+$(document).ready(function(){
 
     $( "#myForm" ).validate({
 
@@ -58,43 +58,76 @@ $().ready(function(){
 
 });
 
+
+// Btn generate_table
+$("#genTableBtn").click(function(){
+    $(document).ready(function(){
+        (function(){
+            genTable();
+        })();
+    });
+});
+
+// Close icon: removing the tab on click
+// Used example from https://jqueryui.com/tabs/
+$( function() {
+    var tableTabs = $( "#tableTabs" ).tabs();
+    tableTabs.on( "click", "span.ui-icon-close", function() {
+        var panelId = $( this ).closest( "li" ).remove().attr( "aria-controls" );
+        $( "#" + panelId ).remove();
+        tableTabs.tabs( "refresh" );
+    });
+});
+
+// Btn to delete all tabs
+$("#deleteAllTabsBtn").click(function(){
+    $(document).ready(function(){
+        (function(){
+            delteAllTabs();
+        })();
+    });
+});
+
 // Function initializes and calls all of the required
 // functions to validate the input and then create 
 // the table.
-function generateTable() {
-    // Initialization. Input captured from the form
-    var xStart = document.getElementById('xStart').value;
-    var xEnd = document.getElementById('xEnd').value;
-    var yStart = document.getElementById('yStart').value;
-    var yEnd = document.getElementById('yEnd').value;
-    var temp = 0;
+function genTable() {
+    // Varibles table, x, y, row, cell, errorMessages
+    var xMin = Math.round(document.getElementById("xStart").value);
+    var xMax = Math.round(document.getElementById("xEnd").value);
+    var yMin = Math.round(document.getElementById("yStart").value);
+    var yMax = Math.round(document.getElementById("yEnd").value);
 
-    // Initialization for inserting values.
-    var inputX = document.getElementById("inputX");
-    var inputY = document.getElementById("inputY");
-    var table = document.getElementById("dynamicTable");
-    var row = table.insertRow();
-    var cell = row.insertCell();
-
-    // Clear the table and any error messages
-    table.innerHTML ="";
-    inputX.innerHTML = "";
-    inputY.innerHTML = "";
-
+    // Check if form is valid
     if(!$("#myForm").valid()){
         return;
     }
 
-    createTable(Math.round(xStart), Math.round(xEnd), Math.round(yStart), Math.round(yEnd), table, row, cell);
+    // Create table
+    createTable(xMin,xMax,yMin,yMax);
 }
 
+// Function creates table and tab
+// Will handle if user puts larger number first
+// ex. starting num = 50, ending num is = -50
+function createTable(xMin,xMax,yMin,yMax){
+    var table = document.createElement('table');
+    var row;
+    var cell;
 
+    //Create tab and link to table
+    var tableName = xMin +" "+ xMax +" "+ yMin +" "+ yMax;
+    var tabNum = $("div#tableTabs ul li").length;
+    $("div#tableTabs ul").append("<li><a href=#table"+tabNum+">" + tableName + "<span class='ui-icon ui-icon-close' role='presentation'></span> </li>");
 
-// Function creates table
-// First creates X-Axis header, then in the
-// nested for loop, the first cell of each 
-// row is styled to denote the multiplicand column.
-function createTable(xMin,xMax,yMin,yMax,table,row,cell){
+    // Add classes to table, styled by bootsrap
+    table.className = "table table-striped table-dark table-bordered table-wrapper";
+
+    // Set table ID and append to table tabs
+    table.setAttribute("id", "table"+tabNum);
+    tableTabs.appendChild(table);
+
+    $("div#tableTabs").tabs("refresh");
 
     // If the xStart input is > xEnd input, swap
     if(xMin > xMax) {
@@ -136,3 +169,11 @@ function createTable(xMin,xMax,yMin,yMax,table,row,cell){
         }
     }
 }
+
+// Delete all tab button
+function delteAllTabs(){
+    $("div#tableTabs ul li").remove();
+    $("table").remove();
+}
+
+
