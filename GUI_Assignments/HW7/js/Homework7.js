@@ -136,4 +136,3 @@ function createTable(xMin,xMax,yMin,yMax,table,row,cell){
         }
     }
 }
-

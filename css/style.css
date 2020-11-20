@@ -103,6 +103,18 @@ footer {
 
 }
 
+.ui-slider {
+    height: 10px;
+}
+
+.ui-slider .ui-slider-handle {
+    border-radius: 10px;
+}
+
+.ui-slider .ui-slider-handle:focus {
+    outline: none;
+}
+
 @media (max-width: 768px) {
 
     .landing-text h1 {
