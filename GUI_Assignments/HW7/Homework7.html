@@ -1,17 +1,19 @@
 <!--
+
 Alex Bochman
 alexander_bochman@student.uml.edu
 
 UMass Lowell Computer Science
 COMP 4610 Section 201 - GUI I Programming
-HW 6 - Adding jQuery to Interactive Dynamic Table
-10/29/2020
+HW 7 - Adding jQuery UI
+11/23/2020
+
 -->
 
 <!DOCTYPE html>
 <html>
     <head>
-        <title>Alex Bochman's Website - Homework 6</title>
+        <title>Alex Bochman's Website - Homework 7</title>
 
         <meta charset="utf-8"/>
         <meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1, user-scalable=no">
@@ -66,7 +68,7 @@ HW 6 - Adding jQuery to Interactive Dynamic Table
                 Yet another JavaScript libary to see its similarities and differences as compared to the library that we have already
                 looked at: the jQuery Validator plugin. This assignment will look at two jQuery UI components: the slider and the tabbed interface.
                 <br><br>
-                Check out the code for this page on my <a href="https://github.com/alexbochman/alexbochman.github.io/tree/main/GUI_Assignments/HW6" target="_blank">GitHub</a>.
+                Check out the code for this page on my <a href="https://github.com/alexbochman/alexbochman.github.io/tree/main/GUI_Assignments/HW7" target="_blank">GitHub</a>.
             </p>
         </div>
 
@@ -76,7 +78,8 @@ HW 6 - Adding jQuery to Interactive Dynamic Table
                 <form class="form-horizontal" id="myForm" action="/action_page.php">
 
                     <div class="inputHeader col-xs-12">Please enter x-axis starting and ending number (multiplier).</div>
-
+                    
+                    <!-- x axis starting number input -->
                     <div class="form-group container-fluid col-xs-6">
                         <div class="inputField">
                             <input onkeydown="return event.keyCode !== 69" 
@@ -91,7 +94,8 @@ HW 6 - Adding jQuery to Interactive Dynamic Table
                             <div id="xStartSlider"></div>
                         </div>
                     </div>
-
+                    
+                    <!-- x axis ending number input -->
                     <div class="form-group container col-xs-6">
                         <div class="inputField">
                             <input onkeydown="return event.keyCode !== 69" 
@@ -109,6 +113,7 @@ HW 6 - Adding jQuery to Interactive Dynamic Table
 
                     <div class="inputHeader col-xs-12">Please enter y-axis starting and ending number (multiplicand).</div>
 
+                    <!-- y axis starting number input -->
                     <div class="form-group col-xs-6">
                         <div class="inputField">
                             <input onkeydown="return event.keyCode !== 69" 
@@ -123,7 +128,8 @@ HW 6 - Adding jQuery to Interactive Dynamic Table
                             <div id="yStartSlider"></div>
                         </div>
                     </div>
-
+                    
+                    <!-- y axis ending number input -->
                     <div class="form-group col-xs-6">
                         <div class="inputField">
                             <input onkeydown="return event.keyCode !== 69" 
@@ -141,18 +147,24 @@ HW 6 - Adding jQuery to Interactive Dynamic Table
 
                 </form>
             </div>
+            
+            <!-- generate table button -->
             <div class="container col-xs-5 col-md-offset-1">
                 <button class="btn-lg btn-primary" type="button" id="genTableBtn">Generate Table</button>
             </div>
+            
+            <!-- values input in the form are displayed here -->
             <div class="col-xs-5 col-sm-5 col-sm-offset-1">
                 <div id="inputX"></div>
                 <div id="inputY"></div>
             </div>
 
+            <!-- delete all tabs button -->
             <div class="container col-xs-11 col-md-offset-1">
                 <br>
                 <button class="btn-lg btn-primary" type="button" id="deleteAllTabsBtn">Delete All Tabs</button>
             </div>
+            
         </div> 
 
         <!-- class "filler" helps with spacing, especially when the table hasn't been generated -->
@@ -186,9 +198,6 @@ HW 6 - Adding jQuery to Interactive Dynamic Table
         </footer>
 
         <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.5.1/jquery.min.js"></script>
-        <!-- jQuery Validation -->
-        <script src="https://cdn.jsdelivr.net/npm/jquery-validation@1.19.2/dist/jquery.validate.min.js"></script>
-        <script src="https://cdn.jsdelivr.net/npm/jquery-validation@1.19.2/dist/additional-methods.min.js"></script>
 
         <!--jQuery 3.5.1-->
         <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.5.1/jquery.min.js"></script>
@@ -198,13 +207,11 @@ HW 6 - Adding jQuery to Interactive Dynamic Table
         <script src="https://cdn.jsdelivr.net/jquery.validation/1.16.0/additional-methods.min.js"></script>
         <!--jQuery UI 1.11.4-->
         <script src="https://code.jquery.com/ui/1.11.4/jquery-ui.min.js"></script>
-        <!-- jQuery UI End -->
-
+        
+        <!-- boostrap CDN -->
         <script src="https://maxcdn.bootstrapcdn.com/bootstrap/4.5.2/js/bootstrap.min.js"></script>
         <!-- js files -->
         <script src="./js/Homework7.js"></script>
-        <script src="js/slider.js"></script>
-        <script src="js/tabs.js"></script>
 
     </body>
 

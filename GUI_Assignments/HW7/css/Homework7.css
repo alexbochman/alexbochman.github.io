@@ -4,8 +4,8 @@ alexander_bochman@student.uml.edu
 
 UMass Lowell Computer Science
 COMP 4610 Section 201 - GUI I Programming
-HW 6 - Adding jQuery to Interactive Dynamic Table
-10/29/2020
+HW 7 - Adding jQuery UI
+11/23/2020
 */
 
 .landing-text {
@@ -98,7 +98,7 @@ td:first-child {
     font-weight: bold;
     position: -webkit-sticky;
     position: sticky;
-    left: -20px;
+    left: -22px;
     z-index: 1;
 }
 
@@ -108,7 +108,7 @@ tr:first-child > td {
     font-weight: bold;
     position: -webkit-sticky;
     position: sticky;
-    top: -5px;
+    top: -18px;
     z-index: 2;
 }
 
