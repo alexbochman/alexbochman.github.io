@@ -52,6 +52,13 @@
                     </li>
 
                     <li class="tab" >
+                        <a href="https://marketplace.visualstudio.com/items?itemName=UmlCs.helloworld" target="_blank">
+                            <i class="fas fa-download"></i>
+                            Download
+                        </a>
+                    </li>
+                    
+                    <li class="tab" >
                         <a href="https://lowell.umassonline.net/webapps/Bb-wiki-BBLEARN/wikiView?course_id=_19767_1&group_id=_32651_1" target="_blank">
                             <i class="fas fa-chalkboard"></i>
                             BlackBoard
@@ -259,6 +266,28 @@
                             <div class="classWithPad">
                                 <h4 class="text-center sticky">Release Notes</h4>
 
+                                 <!-- Version 1.0.0 -->
+                                <div class="releaseHead">
+                                    <button type="button" 
+                                            class="btn btn-info" 
+                                            data-toggle="collapse" 
+                                            data-target="#v100" onclick="rotateChevron('version1.0.0')">
+
+                                        <h4 class="releaseNotesSub">Version 1.0.0 - Production Release &nbsp; <span><i class="fas fa-chevron-right" id="version1.0.0"></i></span></h4>
+                                    </button>
+
+                                    <div id="v100" class="collapse">
+                                        <p class="indent">
+                                            Full Release.
+                                        </p>
+                                        <ul class="indent">
+                                            <li class="releasePoints">Collapsible Pomodoro button toggles the visibility of the status bar items on VS Code.</li>
+                                            <li class="releasePoints">Completed task list implemented. Tasks can be added, removed, and viewed. Removed tasks are considered completed, and can be viewed in the completed tasks menu.</li>
+                                            <li class="releasePoints">Options button and menu has been added. The menu includes the ability to change the timer durations for short breaks, long breaks, and the working timer.</li>
+                                        </ul>
+                                    </div>
+                                </div>
+                                
                                 <!-- Version 0.6.0 -->
                                 <div class="releaseHead">
                                     <button type="button" 
@@ -305,7 +334,7 @@
                                             data-toggle="collapse" 
                                             data-target="#v01" onclick="rotateChevron('version0.1')">
 
-                                        <h4 class="releaseNotesSub">Version 0.1 - First Extension Test &nbsp; <span><i class="fas fa-chevron-right" id="version0.1"></i></span></h4>
+                                        <h4 class="releaseNotesSub">Version 0.0.1 - First Extension Test &nbsp; <span><i class="fas fa-chevron-right" id="version0.1"></i></span></h4>
                                     </button>
 
                                     <div id="v01" class="collapse">
