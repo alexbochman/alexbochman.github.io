@@ -48,11 +48,6 @@ a:hover {
     max-width: 200px;
 }
 
-.releasePoints { 
-    list-style-type: disc;
-    list-style-position: inside;
-}
-
 footer {
     width: 100%;
     background-color: #34527d;

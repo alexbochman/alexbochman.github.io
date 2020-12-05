@@ -244,6 +244,11 @@ Light gray web page font color: #717171
     padding-top: 5px; 
 }
 
+.releasePoints { 
+    list-style-type: disc;
+    list-style-position: inside;
+}
+
 .resources a:hover { color: black; }
 
 /* EVERYTHING ELSE ================================================================= */
