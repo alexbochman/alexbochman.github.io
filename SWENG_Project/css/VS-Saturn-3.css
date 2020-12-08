@@ -134,7 +134,7 @@ Light gray web page font color: #717171
 
 .demoHeader {
     border-top: double;
-    padding-top: 10px;
+    padding: 40px !important;
 }
 
 .videoWrapper {
@@ -328,8 +328,9 @@ body{
 
 .wrapper .main_content .info{
     margin: 20px;
-    color: #717171;
+    color: #515151;        /* text color. #717171 */
     line-height: 25px;
+    font-size: 15px;       /* Originally 14px */
 }
 
 .wrapper .main_content .info div{
