@@ -1,0 +1,60 @@
+/*
+Alex Bochman
+alexander_bochman@student.uml.edu
+
+UMass Lowell Computer Science
+COMP 4610 Section 201 - GUI I Programming
+HW 8 - Scrabble
+12/10/2020
+*/
+
+.landing-text {
+    margin-top: 100px;
+}
+
+p {
+    font-size: 16px;
+    padding-top: 10px;
+    padding-bottom: 10px;
+    margin-top: 20px;
+    margin-bottom: 10px;
+    border-top: double;
+    border-bottom: double;
+}
+
+/* Helps with spacing while the table isn't generated*/
+.filler {
+    padding-bottom: 30px;
+}
+
+footer {
+    margin-top: 50px;
+}
+
+.col{
+    background-color: rgba(255, 255, 255, 0.5);
+    padding: 10px;
+    min-height: 200px;
+    text-align: center;
+    margin: 10px;
+    width:auto;
+    margin-bottom: 50px;
+    border: 2px;
+    border-radius: 10px;
+}
+
+
+#tileRack {
+    background-image: url(../image/scrabble-tile-holder.png);
+    background-repeat: no-repeat;
+    background-position: center;
+    width: 640px;
+    height: 182px; 
+}
+
+@media (max-width: 500px) {
+
+    footer {
+        margin-top: 50px;
+    }
+}
