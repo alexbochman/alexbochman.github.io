@@ -42,14 +42,6 @@ a.text-theme:hover{
     color: #ffffff;
 }
 
-.nav-resume-link {
-    color: #34527d; 
-}
-
-.nav-resume-link:hover {
-    color: #000;
-}
-
 .nav-link.nav-resume-link#pdf-download {
     color: #fff;
     background-color: #34527d;
@@ -61,72 +53,6 @@ a.text-theme:hover{
 
 .navbar-toggler-icon:hover, .navbar-toggler:hover {
     background-color: lightgray;
-}
-
-.anchor{
-    display: block;
-    height: 6rem;
-    margin-top: -6rem;
-    visibility: hidden;
-}
-
-.home-icons {
-    padding-top: 0rem;
-}
-
-.home-icon-no-underline:hover {
-    text-decoration: none;
-}
-
-.features-icons {
-    padding-top: 2rem;
-    padding-bottom: 2rem;
-}
-
-.features-icons .features-icons-item {
-    max-width: 20rem;
-}
-
-.features-icons .features-icons-item .features-icons-icon {
-    height: 7rem;
-}
-
-.features-icons .features-icons-item .features-icons-icon i {
-    font-size: 4.5rem;
-}
-
-.features-icons .features-icons-item:hover .features-icons-icon i {
-    font-size: 5rem;
-}
-
-.icons-hover-link:hover {
-    text-decoration: none;
-}
-
-
-.card{
-    margin-bottom: 1rem;
-}
-
-.card-header {
-    margin-top: 20px;
-}
-
-.project-heading{
-    padding-top: 4rem;
-}
-
-.resume{
-    padding-top: 4rem;
-}
-
-.contact{
-    padding-top: 4rem;
-}
-
-blockquote {
-    border-left: 2px solid #ccc;
-    padding: 0.5em 10px;
 }
 
 
@@ -146,6 +72,18 @@ footer.footer {
 .navbar ul {
     text-align: center;
 }
+
+
+.resumeIntro {
+    margin-top: 100px;
+    margin-bottom: 40px;
+    text-align: center;
+}
+
+#pdfSection {
+    text-align: center;
+}
+
 
 * {
     scrollbar-width: thin;
