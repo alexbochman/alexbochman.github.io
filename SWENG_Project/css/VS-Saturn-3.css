@@ -115,6 +115,11 @@ Light gray web page font color: #717171
     background-color: #34527d;
 }
 
+ .fa-external-link-alt {
+     padding-left: 10px;
+     font-size: 15px;
+}
+
 #overviewLI{
     background-color: #44628d;
 }

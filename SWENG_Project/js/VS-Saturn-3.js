@@ -17,9 +17,15 @@ function toggleNav() {
 // SET THE PROPERTIES AND STYLES WHEN THE NAV BAR OPENS
 function openNav() {
     toggleState = "open";
+    
     var img = document.getElementById("toggleIcon");
     img.setAttribute("class", "fas fa-angle-double-left");
 
+    var extLinks = document.getElementsByClassName("fas fa-external-link-alt");
+    for(var i = 0; i < extLinks.length; i++)
+        extLinks[i].setAttribute("class", "fas fa-external-link-alt");
+    
+    
     document.getElementById("mySidenav").style.width = "200px";
     document.getElementById("main").style.marginLeft = "200px";
     document.getElementById("sideNavHeader").style.visibility = "visible"; 
@@ -34,9 +40,14 @@ function openNav() {
 // SET THE PROPERTIES AND STYLES WHEN THE NAV BAR CLOSES
 function closeNav() {
     toggleState = "closed";
+    
     var img = document.getElementById("toggleIcon");
     img.setAttribute("class", "fas fa-angle-double-left rotated-icon");
 
+    var extLinks = document.getElementsByClassName("fas fa-external-link-alt");
+    for(var i = 0; i < extLinks.length; i++)
+        extLinks[i].setAttribute("class", "fas fa-external-link-alt hide");
+    
     document.getElementById("mySidenav").style.width = "50px";
     document.getElementById("main").style.setProperty("margin-left", "50px", "important");
     document.getElementById("sideNavHeader").style.visibility = "hidden"; 
