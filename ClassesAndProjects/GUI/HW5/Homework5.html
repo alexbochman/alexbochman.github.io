@@ -1,0 +1,151 @@
+<!--
+Alex Bochman
+alexander_bochman@student.uml.edu
+
+UMass Lowell Computer Science
+COMP 4610 Section 201 - GUI I Programming
+HW 5 - Creating an Interactive Dynamic Table
+10/22/2020
+-->
+
+<!DOCTYPE html>
+<html>
+    <head>
+        <title>Alex Bochman's Website - Homework 5</title>
+
+        <meta charset="utf-8"/>
+        <meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1, user-scalable=no">
+
+        <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/css/bootstrap.min.css">
+        <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
+        <link rel="shortcut icon" href="../../../files/faviconCoffee2.png" />
+        <link href="../../../css/style.css" rel="stylesheet" />
+        <link href="./css/Homework5.css" rel="stylesheet" />
+        <link href="https://fonts.googleapis.com/css?family=Lato:300,400,700,300italic,400italic,700italic " rel="stylesheet
+                                                                                                                  " type="text/css">
+
+    </head>
+
+    <body>
+        <!-- Navigation Bar -->
+        <nav class="navbar navbar-expand-lg navbar-default navbar-fixed-top" role="navigation">
+            <div class="container-fluid sticky-top">
+                <div class="navbar-header">
+                    <button type="button" class="navbar-toggle" data-toggle="collapse" data-target="#navbar-collapse-main">
+                        <span class="sr-only">Toggle navigation</span>
+                        <span class="icon-bar"></span>
+                        <span class="icon-bar"></span>
+                        <span class="icon-bar"></span>
+                    </button>
+                    <a class="navbar-brand" href="#"><img src="../../../files/Coffee_to_code_thumbnail.png" alt="Coffee to code thumbnail" class="img-responsive navIcon"></a>
+                </div>
+                <div class="collapse navbar-collapse" id="navbar-collapse-main">
+                    <ul class="nav navbar-nav navbar-right">
+                        <li><a class="active" href="../../../index.html">Home</a></li>
+                        <li><a href="../../classes&projects.html">Classes &amp; Projects</a></li>
+                        <li><a href="../../../resume.html">Resume</a></li>
+                    </ul>
+                </div>
+            </div>
+        </nav>
+
+        <!-- Landing text / descriptor of assignment -->
+        <div class="container landing-text text-center">
+            <h1>Homework 5 - JavaScript</h1>
+            <h3>Creating an Interactive Dynamic Table</h3>
+        </div>
+
+        <!-- Assignment information / how to use the page -->
+        <div id="info" class="text-center">
+            <p class="container">
+                Create a table dynamically based on parameters entered in an HTML form. First,  a form is created that accepts the starting and ending numbers for both the horizontal (multiplier) and vertical (multiplicand) axes of a multiplication table. Second, numbers entered into the form create a multiplication table dynamically. This is what is commonly called a “single page web app” (or application). To start, enter in four numbers within the range of -50 to 50 and then click the "Generate Table" button.
+                <br><br>
+                Check out the code for this page on my <a href="https://github.com/alexbochman/alexbochman.github.io/tree/main/GUI_Assignments/HW5" target="_blank">GitHub</a>.
+            </p>
+        </div>
+
+        <!-- Form for user input -->
+        <div class="container myForm">
+            <div class="container row col-md-offset-1">
+                <form class="form-horizontal" action="/action_page.php">
+
+                    <div class="inputHeader col-xs-12">Please enter x-axis starting and ending number (multiplier).</div>
+
+                    <div class="form-group container-fluid col-xs-6">
+                        <div class="inputField">
+                            <input type="number" class="form-control" id="xStart" min="-50" max="50" placeholder="X-Axis Start" required>
+                            <div class="errorMessage" id="xStartError"></div>
+                        </div>
+                    </div>
+
+                    <div class="form-group container col-xs-6">
+                        <div class="inputField">
+                            <input type="number" class="form-control" id="xEnd" min="-50" max="50" placeholder="X-Axis End" />
+                            <div class="errorMessage" id="xEndError"></div>
+                        </div>
+                    </div>
+
+                    <div class="inputHeader col-xs-12">Please enter y-axis starting and ending number (multiplicand).</div>
+
+                    <div class="form-group col-xs-6">
+                        <div class="inputField">
+                            <input type="number" class="form-control" id="yStart" min="-50" max="50" placeholder="Y-Axis Start" required>
+                            <div class="errorMessage" id="yStartError"></div>
+                        </div>
+                    </div>
+
+                    <div class="form-group col-xs-6">
+                        <div class="inputField">
+                            <input type="number" class="form-control" id="yEnd" min="-50" max="50" placeholder="Y-Axis End" required>
+                            <div class="errorMessage" id="yEndError"></div>
+                        </div>
+                    </div>
+                </form>
+                <div class="container col-xs-12 col-sm-6 text-left">
+                    <button class="btn-lg btn-primary" type="button" onclick="generateTable()">Generate Table</button>
+                </div>
+                <div class="container col-xs-12 col-sm-6 ">
+                    <div id="inputX"></div>
+                    <div id="inputY"></div>
+                </div>
+            </div>
+        </div> 
+
+        <!-- class "filler" helps with spacing, especially when the table hasn't been generated -->
+        <div class="filler"></div>
+
+        <!-- Empty table to be filled by the JavaScript function generateTable() -->
+        <div class="container" id="table-wrapper">
+            <div id="table-container">
+                <table class="table table-striped table-dark table-bordered" id="dynamicTable">
+                </table>
+            </div>
+        </div>
+
+        <!-- Website styled footer -->
+        <footer class="container-fluid text center">
+            <div class="row">
+                <div class="col-sm-4">
+                    <h3>Contact</h3>
+                    <br>
+                    <h4><a href="mailto:alexbochman22@gmail.com" id="email">alexbochman22@gmail.com</a></h4>
+                </div>
+                <div class="col-sm-4">
+                    <h3>Connect</h3>
+                    <br>
+                    <a href="https://www.linkedin.com/in/alexander-bochman-25137014a/" target="_blank" class="fa fa-linkedin"></a>
+                    <a href="https://github.com/alexbochman" target="_blank" class="fa fa-github"></a>
+                    <!--<a href="https://www.youtube.com/channel/UC5NuQhvZ4nee_z9p-prRLqQ" class="fa fa-youtube"></a>-->
+                </div>
+                <div class="col-sm-4">
+                    <img src="../../../files/AB%20Initials.png" alt="Initials icon image" class="icon">
+                </div>
+            </div>
+        </footer>
+
+        <script src="./js/Homework5.js"></script>
+        <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.2.1/jquery.min.js"></script>
+        <script src="https://maxcdn.bootstrapcdn.com/bootstrap/4.5.2/js/bootstrap.min.js"></script>
+
+    </body>
+</html>
