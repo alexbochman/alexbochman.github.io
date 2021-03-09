@@ -87,7 +87,7 @@ function activeTab(id) {
 
 function newTab() { 
     window.open( 
-        "#", "_blank"); 
+        "https://github.com/alexbochman/Algo-Mate", "_blank"); 
 } 
 
 // FUNCTIONS BELOW SHOWS THE CONTENT OF THE TAB WHEN CLICKED IN THE NAV BAR
