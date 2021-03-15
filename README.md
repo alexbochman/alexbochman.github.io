@@ -1,4 +1,4 @@
-# <p align="center"> Personal Website </p>
+# <p> Personal Website </p>
 
 <br>
 
