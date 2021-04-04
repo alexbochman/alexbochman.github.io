@@ -1,0 +1,190 @@
+
+<!DOCTYPE html>
+<html lang="en">
+    <head>
+        <title>Eugenius Timer Project Page</title>
+
+        <meta charset="utf-8"/>
+        <meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1, user-scalable=no">
+
+        <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/css/bootstrap.min.css">
+        <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
+        <link rel="shortcut icon" href="./files/faviconCoffee2.png" />
+        <link href="./style.css" rel="stylesheet" />
+        <link href="https://fonts.googleapis.com/css?family=Lato:300,400,700,300italic,400italic,700italic " rel="stylesheet" type="text/css">
+    </head>
+
+    <body>
+        <div class="wrapper">
+
+            <!--
+            =================================================
+            SIDEBAR NAVIGATION
+            =================================================
+            -->
+            <div id="mySidenav" class="sidenav">
+                <img id="sideNavHeader" src="./files/GooeyGuys.png" >
+
+                <ul id="navList">
+                    <li class="tab active"
+                        id="todoTasksLI"
+                        onclick="showhide('todoTasks'); activeTab('todoTasksLI');">
+                        <a href="#">
+                            <i class="fas fa-tasks"></i>
+                            Tasks To-Do
+                        </a>
+                    </li>
+
+                    <li class="tab"
+                        id="completedTasksLI"
+                        onclick="showhide('completedTasks'); activeTab('completedTasksLI');">
+                        <a href="#">
+                            <i class="far fa-check-square"></i>
+                            Completed Tasks
+                        </a>
+                    </li>
+
+                    <li class="tab"
+                        id="optionsLI"
+                        onclick="showhide('options'); activeTab('optionsLI');">
+                        <a href="#">
+                            <i class="fas fa-cog"></i>
+                            Options
+                        </a>
+                    </li>
+                </ul>
+
+                <div class="toggle_button">
+                    <a onclick="toggleNav()"><i id="toggleIcon" class="fas fa-angle-double-left"></i> </a>
+                </div>
+            </div>
+
+            <!--
+            =================================================
+            MAIN CONTENT (Tasks To-Do displayed by default)
+            =================================================
+            -->
+            <div class="main_content" id="main">
+                <div class="header">Eugenius Timer</div>
+                <div class="info">
+
+                    <!--
+                    =================================================
+                    TASKS TO-DO / CREATE NEW TASKS SECTION
+                    =================================================
+                    -->
+
+                    <div class="myHide" id="todoTasks">
+                        <h2 class="text-center padding">Tasks To-Do</h2>
+
+                        <!--
+                        =================================================
+                        CREATE NEW TASK SECTION
+                        =================================================
+                        -->
+                        <button type="button"
+                                class="btn btn-info col-xs-12"
+                                data-toggle="collapse"
+                                data-target="#taskForm" onclick="rotateChevron('newTaskChevron')">
+
+                            <h4 class="text-center sticky col-xs-12">
+                                Create New Task &emsp;
+                                <span><i class="fas fa-chevron-right" id="newTaskChevron"></i></span>
+                            </h4>
+                        </button>
+
+                        <div id="taskForm" class="collapse col-xs-12">
+                            <form>
+                                <div class="col-xs-12">
+                                    <label for="title">Title</label><br>
+                                    <input type="text" id="title" name="title" value="New Task Title" maxlength="80"><br>
+                                </div>
+
+                                <div class="col-xs-12">
+                                    <label for="description">Description</label><br>
+                                    <textarea type="text" id="description" name="description" rows="5">Optionally provide a meaningful description.</textarea><br>
+                                </div>
+
+                                <div class="col-xs-12">
+                                    <label for="subTasks">Create Sub Task</label>
+                                    <i class="fas fa-plus-circle fa-2x" onclick="addSubField('subTasks')"></i>
+                                    <ul id="subTasks"></ul>
+                                </div>
+
+                                <div class="col-xs-12">
+                                    <input type="button" value="Submit" id="submit" onClick="completeTaskCreation(this.parentElement.parentElement)">
+                                    <input type="reset">
+                                </div>
+
+                            </form>
+                        </div>
+
+                        <div class="spacing"></div>
+
+                        <!-- TASK LIST SECTION -->
+                        <button type="button"
+                                class="btn btn-info col-xs-12"
+                                data-toggle="collapse"
+                                data-target="#taskList" onclick="rotateChevron('taskListChevron')">
+
+                            <h4 class="text-center sticky col-xs-12">
+                                Task List &emsp;
+                                <span><i class="fas fa-chevron-right" id="taskListChevron"></i></span>
+                            </h4>
+                        </button>
+
+                        <div class="tasksBlock col-xs-12 taskList" >
+                            <div id="taskList" class="collapse classWithPad">
+                            </div>
+                        </div>
+                    </div>
+
+                    <!--
+                    =================================================
+                    COMPLETED TASKS SECTION
+                    =================================================
+                    -->
+
+                    <div class="myHide" id="completedTasks">
+                        <h2 class="text-center padding">Completed Tasks</h2>
+
+                        <!-- TASK LIST SECTION -->
+                        <button type="button"
+                                class="btn btn-info col-xs-12"
+                                data-toggle="collapse"
+                                data-target="#completedList" onclick="rotateChevron('completedListChevron')">
+
+                            <h4 class="text-center sticky col-xs-12">
+                                Completed Tasks List &emsp;
+                                <span><i class="fas fa-chevron-right" id="completedListChevron"></i></span>
+                            </h4>
+                        </button>
+
+                        <div class="tasksBlock col-xs-12">
+                            <div id="completedList" class="collapse classWithPad">
+                            </div>
+                        </div>
+                    </div>
+
+                    <!--
+                    =================================================
+                    OPTIONS SECTION
+                    =================================================
+                    -->
+
+                    <div class="myHide" id="options">
+                        <h2 class="text-center padding">Options</h2>
+                    </div>
+
+                </div>
+            </div>
+        </div>
+
+        <script src="./UI.js"></script>
+        <script src="./tasks.js"></script>
+        <script src="https://kit.fontawesome.com/b99e675b6e.js"></script>
+        <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.2.1/jquery.min.js"></script>
+        <script src="https://maxcdn.bootstrapcdn.com/bootstrap/4.5.2/js/bootstrap.min.js"></script>
+
+    </body>
+</html>
