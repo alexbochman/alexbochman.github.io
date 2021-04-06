@@ -12,13 +12,13 @@ function addSubField(id) {
   newEl.innerHTML =
     "<div class='col-xs-5'>" +
       "<label for='subName" + subFieldNum + "'>Sub Task Name</label>" +
-      "<input type='text' id='subName" + subFieldNum + "'" + "value='Sub Task Name'>" +
+      "<textarea type='text' id='subName" + subFieldNum + "'" + "placeholder='Sub Task Name' rows='1'></textarea>" +
     "</div>" +
 
     "<div class='col-xs-5'>" +
       "<label for='subDesc" + subFieldNum + "'>Sub Task Description</label>" +
-      "<input type='text' id='subDesc" + subFieldNum + "'" +
-      "value='Sub Task Description'>" +
+      "<textarea type='text' id='subDesc" + subFieldNum + "'" +
+      "placeholder='Sub Task Description' rows='1'></textarea>" +
     "</div>" +
     "<i class='fas fa-trash-alt fa-3x col-xs-1 text-danger' onclick='removeSubField(this)'></i>";
     //"<button onclick='removeSubField(this)' class='col-xs-12 btn-danger' style='margin-bottom: 10px; margin-top: -20px;'>Remove Sub Task</button>";
@@ -58,9 +58,8 @@ function completeTaskCreation(submit) {
   moveToUncomplete(newTask);
 
   //now that the task is completed and set in the right place we need to empty the form.
-  submit.children[0].children[2].value = "New Task Title";
-  submit.children[1].children[2].innerHTML =
-    "Optionally provide a meaningful description.";
+  submit.children[0].children[2].value = "";
+  submit.children[1].children[2].value = "";
   subFieldNum = 0;
   submit.children[2].children[2].innerHTML = "";
 
