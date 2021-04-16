@@ -66,6 +66,20 @@
             -->
             <div class="main_content" id="main">
                 <div class="header">Eugenius Timer</div>
+                <div class="header">
+                    <div id="timer">
+                        Next Break In:<br>
+                        33:33
+                    </div>
+                    <div>
+                        <div>
+                            <button type="button" id="switchTimerButton">Start Timer</button>
+                            <button type="button" id="resetTimerButton">Reset Timer</button>
+                            <button type="button" id="switchBreakButton" hidden>Pause Break Timer</button>
+                            <button type="button" id="skipBreakButton" hidden>Skip Break Timer</button>
+                        </div>
+                    </div>
+                </div>
                 <div class="info">
 
                     <!--
@@ -174,6 +188,32 @@
 
                     <div class="myHide" id="options">
                         <h2 class="text-center padding">Options</h2>
+
+                        <div class="header col-xs-6" style="border-right: solid 2px" id="workTimerUpdate">
+                            <div>Update Work Timer</div><br>
+                            <div class="col-xs-6">
+                                <label for="workMin">Minutes</label><br>
+                                <input type="number" id="workMin" min="0" class="col-xs-12" onchange="this.style.background = 'white';">
+                            </div>
+                            <div class="col-xs-6">
+                                <label for="workSec">Seconds</label><br>
+                                <input type="number" id="workSec" min="1" class="col-xs-12" onchange="this.style.background = 'white';">
+                            </div>
+                            <button onclick="setTimer('work')">Confirm</button>
+                        </div>
+
+                        <div class="header col-xs-6" id="breakTimerUpdate">
+                            <div>Update Break Timer</div><br>
+                            <div class="col-xs-6">
+                                <label for="breakMin">Minutes</label><br>
+                                <input type="number" id="breakMin" min="0" class="col-xs-12" onchange="this.style.background = 'white';">
+                            </div>
+                            <div class="col-xs-6">
+                                <label for="breakSec">Seconds</label><br>
+                                <input type="number" id="breakSec" min="1" class="col-xs-12" onchange="this.style.background = 'white';">
+                            </div>
+                            <button onclick="setTimer('break')">Confirm</button>
+                        </div>
                     </div>
 
                 </div>
@@ -185,6 +225,7 @@
         <script src="https://kit.fontawesome.com/b99e675b6e.js"></script>
         <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.2.1/jquery.min.js"></script>
         <script src="https://maxcdn.bootstrapcdn.com/bootstrap/4.5.2/js/bootstrap.min.js"></script>
+        <script src="./timer.js"></script>
 
     </body>
 </html>

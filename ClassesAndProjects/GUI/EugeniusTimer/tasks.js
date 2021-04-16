@@ -51,7 +51,7 @@ function completeTaskCreation(submit) {
       "<div>" +
         "<p class='col-xs-4'>" + subTaskObjects[i].name +"</p>" +
         "<p class='col-xs-8'>" + subTaskObjects[i].desc + "</p>" +
-      "</div>";
+      "</div> <br><br>";
   }
 
   var newTask = createTask(name, desc, subTasksString);
@@ -86,7 +86,7 @@ function createTask(name, desc, subTasksString) {
       "Chevron')>" +
       "<h4 class='taskTitle'>" +
       name +
-      " &nbsp; &nbsp; <span><i class='fas fa-chevron-right' id='task" +
+      " &nbsp<span><i class='fas fa-chevron-right' id='task" +
       taskListSize +
       "Chevron'></i></span></h4>" +
       "</button>" +
@@ -96,7 +96,7 @@ function createTask(name, desc, subTasksString) {
     "<div id='task" +
       taskListSize +
       "' class='collapse col-xs-12'>" +
-      "<p class='col-xs-12'>" +
+      "<p>" +
       desc +
       "</p>" +
       "<ul>" +
