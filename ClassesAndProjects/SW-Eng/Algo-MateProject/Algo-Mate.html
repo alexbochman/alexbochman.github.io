@@ -100,13 +100,16 @@
                             <b>Algo-Mate Extension</b><br>
                             Algo-Mate streamlines the insertion of common blocks of code to prevent programmers from losing focus of VS Code while increasing productivity. This is achieved by making tedious design patterns easier to implement across C++, Java, JavaScript, and Python. Ideally for users of VS Code, gone will be the days where you transition from C++ to Java to Python back to C++ and forget the exact syntax of writing a design pattern. With Algo-Mate, the buttons, controls, and auto-completed code snippets we’ve developed will aim to increase the efficiency, productivity, and even enjoyability of writing code in multiple programming languages.                         
                             
-                            <h3 class="text-center padding demoHeader">Demonstration Video</h3>
+                            <!-- <h3 class="text-center padding demoHeader">Demonstration Video</h3> -->
                             
+                            <!--
                             <div class="videoWrapper">
                                 <div class="text-center videoContainer">
-                                    <!-- <iframe width="560" height="315" src="https://www.youtube.com/embed/2q1HaEupDDE" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture" allowfullscreen></iframe> -->
+                                    <iframe width="560" height="315" src="https://www.youtube.com/embed/2q1HaEupDDE" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture" allowfullscreen></iframe>
                                 </div>
                             </div>
+                            -->
+                            
                         </div>
                     </div>
 
@@ -235,6 +238,32 @@
                             <div class="classWithPad">
                                 <h4 class="text-center sticky">Release Notes</h4>
                                 
+                                <!-- Version 1.0.0 -->
+                                <div class="releaseHead">
+                                    <button type="button" 
+                                            class="btn btn-info" 
+                                            data-toggle="collapse" 
+                                            data-target="#v100" onclick="rotateChevron('version1.0.0')">
+
+                                        <h4 class="releaseNotesSub">Version 1.0.0 - Full Release Version &nbsp; <span><i class="fas fa-chevron-right" id="version1.0.0"></i></span></h4>
+                                    </button>
+
+                                    <div id="v100" class="collapse">
+                                        <p class="indent">
+                                            
+                                        </p>
+                                        
+                                        <ul class="indent" id="v100List">
+                                            <li>Completed implementation singleton, builder, adapter, and observer design patterns in C++, Java, JS, and Python.</li>
+                                            
+                                            <li>UI component that provides design pattern documentation has been completed.</li>
+                                            
+                                            <li>UI component that generates build data has been completed. </li>
+                                        </ul>
+
+                                    </div>
+                                </div>
+                                
                                 <!-- Version 0.0.3 -->
                                 <div class="releaseHead">
                                     <button type="button" 
@@ -319,6 +348,12 @@
                                             <h4><i class="far fa-file-pdf"></i> Final Report</h4>
                                         </a>
                                     </li>
+                                    <li class="pdf indent">
+                                        <a id="pdf-download" href="./files/Algo-Mate%20Final%20Presentation.pdf" target="_blank">
+                                            <h4><i class="far fa-file-pdf"></i> Final Presentation Slides</h4>
+                                        </a>
+                                    </li>
+                                    
                                 </ol>
 
                             </div> 

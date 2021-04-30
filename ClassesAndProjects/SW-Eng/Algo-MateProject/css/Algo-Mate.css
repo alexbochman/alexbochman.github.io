@@ -352,6 +352,11 @@ body{
     margin-left: 0px;
 }
 
+#v100List li {
+    list-style-type: circle;
+    
+}
+
 /* SCROLL BAR ================================================================= */
 
 * {
