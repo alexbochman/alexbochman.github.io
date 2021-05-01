@@ -10,7 +10,11 @@
         <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/css/bootstrap.min.css">
         <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
         <link rel="shortcut icon" href="./files/faviconCoffee2.png" />
-        <link href="./style.css" rel="stylesheet" />
+        <link href="./css/style.css" rel="stylesheet" />
+        <link href="./css/timer.css" rel="stylesheet" />
+        <link href="./css/nav.css" rel="stylesheet" />
+        <link href="./css/tasks.css" rel="stylesheet" />
+        <link href="./css/options.css" rel="stylesheet" />
         <link href="https://fonts.googleapis.com/css?family=Lato:300,400,700,300italic,400italic,700italic " rel="stylesheet" type="text/css">
     </head>
 
@@ -52,6 +56,13 @@
                             Options
                         </a>
                     </li>
+
+                    <li id="github" onclick="newTab()">
+                        <a href="#"><i class="fab fa-github"></i>
+                            GitHub
+                            <i class="fas fa-external-link-alt" id="externalLink"></i>
+                        </a>
+                    </li>
                 </ul>
 
                 <div class="toggle_button">
@@ -73,10 +84,10 @@
                     </div>
                     <div>
                         <div>
-                            <button type="button" id="switchTimerButton">Start Timer</button>
-                            <button type="button" id="resetTimerButton">Reset Timer</button>
-                            <button type="button" id="switchBreakButton" hidden>Pause Break Timer</button>
-                            <button type="button" id="skipBreakButton" hidden>Skip Break Timer</button>
+                            <button type="button" class="timerbtn1" id="switchTimerButton">Start Timer</button>
+                            <button type="button" class="timerbtn1" id="resetTimerButton">Reset Timer</button>
+                            <button type="button" class="timerbtn1" id="switchBreakButton" hidden>Pause Break</button>
+                            <button type="button" class="timerbtn1" id="skipBreakButton" hidden>Skip Break</button>
                         </div>
                     </div>
                 </div>
@@ -111,7 +122,7 @@
                             <form>
                                 <div class="col-xs-12">
                                     <label for="title">Title</label><br>
-                                    <textarea type="text" id="title" name="title" placeholder="New Task Title" rows="1" maxlength="80"></textarea><br>
+                                    <textarea type="text" id="title" name="title" placeholder="New Task Title" rows="1" maxlength="80" required></textarea><br>
                                 </div>
 
                                 <div class="col-xs-12">
@@ -189,43 +200,53 @@
                     <div class="myHide" id="options">
                         <h2 class="text-center padding">Options</h2>
 
-                        <div class="header col-xs-6" style="border-right: solid 2px" id="workTimerUpdate">
+                        <div class="center">
+                            <label>Sound Notification</label>
+                            <label class="switch">
+                                <input onchange="toggleSwitch()" type="checkbox" checked>
+                                <span class="slider round"></span>
+                            </label>
+
+                        </div>
+
+                        <div class="header col-xs-12 col-md-6" style="border-right: solid 2px" id="workTimerUpdate">
                             <div>Update Work Timer</div><br>
-                            <div class="col-xs-6">
+                            <div class="col-xs-12 col-md-6">
                                 <label for="workMin">Minutes</label><br>
                                 <input type="number" id="workMin" min="0" class="col-xs-12" onchange="this.style.background = 'white';">
                             </div>
-                            <div class="col-xs-6">
+                            <div class="col-xs-12 col-md-6">
                                 <label for="workSec">Seconds</label><br>
                                 <input type="number" id="workSec" min="1" class="col-xs-12" onchange="this.style.background = 'white';">
                             </div>
-                            <button onclick="setTimer('work')">Confirm</button>
+                            <button class="timerbtn2" onclick="setTimer('work')">Confirm</button>
                         </div>
 
-                        <div class="header col-xs-6" id="breakTimerUpdate">
+                        <div class="header col-xs-12 col-md-6" id="breakTimerUpdate">
                             <div>Update Break Timer</div><br>
-                            <div class="col-xs-6">
+                            <div class="col-xs-12 col-md-6">
                                 <label for="breakMin">Minutes</label><br>
                                 <input type="number" id="breakMin" min="0" class="col-xs-12" onchange="this.style.background = 'white';">
                             </div>
-                            <div class="col-xs-6">
+                            <div class="col-xs-12 col-md-6">
                                 <label for="breakSec">Seconds</label><br>
                                 <input type="number" id="breakSec" min="1" class="col-xs-12" onchange="this.style.background = 'white';">
                             </div>
-                            <button onclick="setTimer('break')">Confirm</button>
+                            <button class="timerbtn2" onclick="setTimer('break')">Confirm</button>
                         </div>
                     </div>
-
                 </div>
             </div>
         </div>
 
-        <script src="./UI.js"></script>
-        <script src="./tasks.js"></script>
+        <script src="./js/UI.js"></script>
+        <script src="./js/tasks.js"></script>
+        <script src="./js/timer.js"></script>
         <script src="https://kit.fontawesome.com/b99e675b6e.js"></script>
         <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.2.1/jquery.min.js"></script>
         <script src="https://maxcdn.bootstrapcdn.com/bootstrap/4.5.2/js/bootstrap.min.js"></script>
-        <script src="./timer.js"></script>
+        <script src="js/saveManager.js"></script>
+
 
     </body>
 </html>

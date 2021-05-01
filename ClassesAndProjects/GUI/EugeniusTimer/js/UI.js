@@ -52,30 +52,28 @@ function closeNav() {
     document.getElementById("main").style.setProperty("margin-left", "50px", "important");
     document.getElementById("sideNavHeader").style.visibility = "hidden";
 
-    var x = document.getElementById("navList");
+    x = document.getElementById("navList");
     var y = x.getElementsByTagName("A");
-    var i;
     for (i = 0; i < y.length; i++) {
         y[i].style.visibility = "hidden";
     }
 
-    var x = document.getElementById("navList");
-    var y = x.getElementsByClassName("fas");
-    var i;
+    x = document.getElementById("navList");
+    y = x.getElementsByClassName("fas");
     for (i = 0; i < y.length; i++) {
         y[i].style.visibility = "visible";
     }
 
-    var x = document.getElementById("navList");
-    var y = x.getElementsByClassName("fab");
-    var i;
+    x = document.getElementById("navList");
+    y = x.getElementsByClassName("fab");
+
     for (i = 0; i < y.length; i++) {
         y[i].style.visibility = "visible";
     }
 
-    var x = document.getElementById("navList");
-    var y = x.getElementsByClassName("far");
-    var i;
+    x = document.getElementById("navList");
+    y = x.getElementsByClassName("far");
+
     for (i = 0; i < y.length; i++) {
         y[i].style.visibility = "visible";
     }
@@ -93,8 +91,7 @@ function activeTab(id) {
 }
 
 function newTab() {
-    window.open(
-        "https://github.com/alexbochman/VS-Saturn-3", "_blank");
+    window.open("https://github.com/alexbochman/Eugenius-Timer", "_blank");
 }
 
 // FUNCTIONS BELOW SHOWS THE CONTENT OF THE TAB WHEN CLICKED IN THE NAV BAR

@@ -2,6 +2,7 @@ var workTimerValue   = [33, 33];
 var breakTimerValue  = [33, 33];
 var onBreak = false;
 var isRunning = false;
+var soundOn = true;
 var clock;
 
 var states = {
@@ -32,16 +33,16 @@ class timer{
     state = states.READY;
     fromPause = false;
 
-    constructor(interval = ((workTimerValue[0] * 60) + workTimerValue[1]) * 1000, 
+    constructor(interval = ((workTimerValue[0] * 60) + workTimerValue[1]) * 1000,
                 breakInterval = ((breakTimerValue[0] * 60) + breakTimerValue[1]) * 1000){
         this.interval = interval;
         this.breakInterval = breakInterval;
     }
 
     start = function(){
-        if(onBreak) 
-            return false;    
-        
+        if(onBreak)
+            return false;
+
         if(!this.fromPause)
             this.msLeft = this.interval;
         else
@@ -71,7 +72,8 @@ class timer{
     }
 
     startBreak = function(){
-        if(!onBreak) 
+        playSound();
+        if(!onBreak)
             return false;
 
         if(!this.fromPause)
@@ -80,7 +82,7 @@ class timer{
             this.fromPause = false;
 
         document.getElementById("timer").innerHTML = "Break Ends In:<br>" + millisecondsToMMSS(this.msLeft);
-        
+
         let onTimeout = () => {
             this.reset();
             onBreak = false;
@@ -88,7 +90,7 @@ class timer{
             document.getElementById("resetTimerButton").hidden = false;
             document.getElementById("switchBreakButton").hidden = true;
             document.getElementById("skipBreakButton").hidden = true;
-            
+
             this.start();
         };
 
@@ -109,7 +111,7 @@ class timer{
         this.state = states.READY;
         document.getElementById("timer").innerHTML = "Next Break In:<br>" + millisecondsToMMSS(this.interval);
         onBreak = false;
-        
+
     }
 
     stop = function(){
@@ -216,7 +218,7 @@ function setTimer(timerDef){
         min.style.background = "red";
         fail = true;
     }
-    
+
     if(Number.isNaN(parseInt(sec.value)) || parseInt(sec.value) > 59 || parseInt(sec.value) < 0){
         sec.style.background = "red";
         fail = true;
@@ -259,4 +261,15 @@ function MinSectoMMSS(minutes, seconds) {
     if (minutes < 10) { minutes = "0" + minutes; }
     if (seconds < 10) { seconds = "0" + seconds; }
     return minutes + ':' + seconds;
+}
+
+function playSound() {
+    if(soundOn) {
+        const audio = new Audio("../files/notification.mp3");
+        audio.play();
+    }
+}
+
+function toggleSwitch() {
+    soundOn = soundOn ? false : true;
 }

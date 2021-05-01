@@ -1,0 +1,18 @@
+
+/* NOTES =================================================================
+
+Website theme color: #34527d
+Website theme alt color: #44628d
+Light gray web page font color: #717171
+*/
+
+.timerbtn1, .timerbtn2 {
+    border-radius: 5px;
+    color: white;
+    font-size: 16px;
+    width: 20%;
+    height: 30px;
+    background-color: #34527d;
+}
+
+.timerbtn2 {width: 20%;}

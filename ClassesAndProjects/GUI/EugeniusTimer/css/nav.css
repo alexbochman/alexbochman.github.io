@@ -1,0 +1,140 @@
+
+
+/* NAVIGATION BAR ================================================================= */
+
+#sideNavHeader {
+    margin-top: -100px;
+    width: 200px;
+    height: 200px;
+    padding: inherit;
+}
+
+#toggleIcon {
+    transition: .5s;
+    font-size: 20px;
+    margin-left: 10px;
+    color: #dfdaf9;
+}
+
+
+.rotated-icon {
+    -webkit-transform: rotate(180deg);
+    transform: rotate(180deg);
+}
+
+#taskListHeader {
+    margin-top: -100px;
+    width: 200px;
+    height: 150px;
+    padding: inherit;
+}
+
+#taskListHeader h1 {
+    text-align: center;
+    color: #dfdaf9;
+}
+
+.fab, .fas, .far, .fad{
+    font-size: 25px;
+    margin-right: 10px;
+    margin-left: -5px;
+}
+
+.fa-file-alt {
+    margin-right: 3px;
+    margin: auto;
+}
+
+.wrapper .sidenav ul li a .fas{
+    width: 25px;
+}
+
+.wrapper .sidenav ul li:hover, .toggle_button:hover{
+    background-color: #44628d !important;
+}
+
+.wrapper .sidenav ul li:hover a, #toggleIcon:hover{
+    color: #fff;
+}
+
+.wrapper .sidenav ul li a:focus {
+    text-decoration: none;
+}
+
+.wrapper .sidenav .toggle_button{
+    position: absolute;
+    bottom: 0;
+    left: 50%;
+    transform: translateX(-50%);
+    display: flex;
+}
+
+.wrapper .sidenav .toggle_button a{
+    display: block;
+    width: 200px;
+    height: 40px;
+    line-height: 45px;
+    text-align: center;
+    margin: 0 5px;
+    color: #fff;
+    border-top: 2px solid #bdb8d7;
+    border-top: 2px solid rgba(0,0,0,0.05);
+    border-top: 1px solid rgba(255,255,255,0.05);
+}
+
+.wrapper .sidenav{
+    height: 100%; /* 100% Full-height */
+    width: 200px; /* 0 width - change this with JavaScript */
+    position: fixed; /* Stay in place */
+    z-index: 1; /* Stay on top */
+    top: 0; /* Stay at the top */
+    left: 0;
+    background-color: #34527d;
+    overflow-x: hidden; /* Disable horizontal scroll */
+    padding-top: 60px; /* Place content 60px from the top */
+    transition: 0.5s; /* 0.5 second transition effect to slide in the sidenav */
+}
+
+.wrapper .sidenav ul li{
+    padding: 15px;
+    border-bottom: 1px solid #bdb8d7;
+    border-bottom: 1px solid rgba(0,0,0,0.05);
+    border-top: 1px solid rgba(255,255,255,0.05);
+    transition: 0.3s;
+    cursor: pointer;
+
+}
+
+.wrapper .sidenav ul li a{
+    color: #bdb8d7;
+    display: block;
+}
+
+/* For JS / and the navbar. Hides everything not in focus */
+.myHide {
+    display: none;
+}
+
+.tab {
+    background-color: #34527d;
+}
+
+.active {
+    background-color: #44628d;
+    color: white;
+}
+
+a:hover {
+    text-decoration: none !important;
+}
+
+.fa-external-link-alt {
+    padding-left: 10px;
+    padding-top: 5px;
+    font-size: 18px;
+    float: right;
+}
+
+#overviewLI{
+    background-color: #44628d;
+}

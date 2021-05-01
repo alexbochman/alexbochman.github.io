@@ -1,0 +1,180 @@
+
+/* OVERVIEW ================================================================= */
+
+#todoTasks {
+    display: block;
+}
+
+/* TASKS ================================================================= */
+
+.tasksBlock {
+    background-color: white;
+    max-height: 800px;
+    overflow: auto;
+}
+
+.fa-plus-circle {
+    margin: 10px;
+    margin-bottom: 20px;
+    color: #4CAF50;
+}
+
+.fa-plus-circle:hover {
+    color: #45a049;
+}
+
+.fa-trash-alt {
+    margin-top: 40px;
+}
+
+.fa-trash-alt:hover {
+    color: red;
+}
+
+input[type=text], textarea{
+    width: 100%;
+    padding: 12px 20px;
+    margin: 8px 0;
+    border: 1px solid #ccc;
+    border-radius: 4px;
+    color: gray;
+
+}
+
+#submit {
+    margin-bottom: 10px;
+    width: 25%;
+
+    background-color: #4CAF50;
+    color: white;
+    padding: 8px 16px;
+    margin-right: 20px !important;
+    margin: 8px 0;
+    border: none;
+    border-radius: 4px;
+    cursor: pointer;
+}
+
+#submit:hover {
+    background-color: #45a049;
+}
+
+input[type=reset] {
+    margin-bottom: 10px;
+    width: 20%;
+    background-color: #4CAF50;
+    color: white;
+    padding: 8px 16px;
+    margin: 8px 0;
+    border: none;
+    border-radius: 4px;
+    cursor: pointer;
+}
+
+input[type=reset]:hover {
+    background-color: #45a049;
+}
+
+#description {
+    height: 150px;
+}
+
+.sticky {
+    position: -webkit-sticky; /* Safari */
+    position: sticky;
+    top: 0;
+    z-index: 2;
+    padding: 15px;
+    border-top: solid 20px;
+    margin-top: -5px;
+    margin-bottom: 15px;
+    background-color: #44628d;
+    color: white;
+}
+
+.sticky:hover {
+    background-color: #4f4f4f;
+}
+
+.classWithPad { margin:10px; padding:10px; }
+
+.indent {
+    padding-left: 40px;
+}
+
+.btn, .btn:focus{
+    background-color: white !important;
+    color: black !important;
+    border-style: none !important;
+    white-space: normal !important;
+    outline: none !important;
+    text-align: right !important;
+    box-shadow: none !important;
+    float: left;
+}
+
+.fa-chevron-right {
+    font-size: 20px !important;
+    transition: .3s
+}
+
+.rotatedChevron {
+    font-size: 20px;
+    transition: .3s;
+    -webkit-transform: rotate(90deg);
+    transform: rotate(90deg);
+}
+
+.topRow {
+    margin-bottom: 0px !important;
+}
+
+#taskForm {
+    background-color: white;
+    max-height: 600px;
+    overflow: auto;
+    clear: both;
+}
+
+.task {
+    border-bottom: 1px solid #e0e4e8;
+    margin-bottom: 0px !important;
+    clear: both;
+    overflow: hidden !important;
+}
+
+.taskOptions {
+    display: inline-block;
+    white-space: nowrap;
+    margin-bottom: 0px !important;
+    float: right;
+}
+
+.btn-success {
+    margin-bottom: 10px;
+    color: white;
+    padding: 8px 16px;
+    margin-right: 20px !important;
+    margin: 8px 0;
+    border: none;
+    border-radius: 4px;
+    cursor: pointer;
+}
+
+.btn-danger {
+    margin-bottom: 10px;
+    color: white;
+    padding: 8px 16px;
+    margin-right: 20px !important;
+    margin: 8px 0;
+    border: none;
+    border-radius: 4px;
+    cursor: pointer;
+}
+
+.floatClear {
+    clear: both;
+    overflow: hidden;
+}
+
+.taskTitle:hover { color: #717171 }

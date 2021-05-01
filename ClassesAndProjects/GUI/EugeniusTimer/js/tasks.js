@@ -55,7 +55,7 @@ function completeTaskCreation(submit) {
   }
 
   var newTask = createTask(name, desc, subTasksString);
-  moveToUncomplete(newTask);
+  
 
   //now that the task is completed and set in the right place we need to empty the form.
   submit.children[0].children[2].value = "";
@@ -64,9 +64,9 @@ function completeTaskCreation(submit) {
   submit.children[2].children[2].innerHTML = "";
 
   taskListSize++;
-  taskList.push({ title: name, desc: desc, subTasks: subTaskObjects });
-  // localStorage.setItem("taskList", JSON.stringify(taskList));
-  // localStorage.setItem("taskListSize", taskList.length);
+  taskList.push({ title: name, desc: desc, subTasks: subTaskObjects, completed: false, taskNumber: taskList.length });
+  moveToUncomplete(newTask);
+  saveTaskList(JSON.stringify(taskList), taskListSize);
 }
 
 //the buttons need to be setup after the fact because the onclick needs to be changed, it's a pain but needs to be done this way
@@ -111,6 +111,8 @@ function moveToComplete(objectToMove) {
   objectToMove.children[0].children[1].innerHTML =
     "<button type='button' class='btn-success' onclick='moveToUncomplete(this.parentElement.parentElement.parentElement)'>Uncomplete</button>" +
     "<button type='button' class='btn-danger' onclick='deleteTask(this.parentElement.parentElement.parentElement)'>Delete</button>";
+  taskList[objectToMove.getAttribute("tasklistsize")].completed = true;
+  saveTaskList(JSON.stringify(taskList), taskListSize);
 }
 
 function moveToUncomplete(objectToMove) {
@@ -118,6 +120,8 @@ function moveToUncomplete(objectToMove) {
   objectToMove.children[0].children[1].innerHTML =
     "<button type='button' class='btn-success' onclick='moveToComplete(this.parentElement.parentElement.parentElement)'>Complete</button>" +
     "<button type='button' class='btn-danger' onclick='deleteTask(this.parentElement.parentElement.parentElement)'>Delete</button>";
+  taskList[parseInt(objectToMove.getAttribute("tasklistsize"))].completed = false;
+  saveTaskList(JSON.stringify(taskList), taskListSize);
 }
 
 function deleteTask(objectToDelete) {
@@ -126,22 +130,45 @@ function deleteTask(objectToDelete) {
   var newList = [];
   var found = false;
   var index = -1;
-  for (i = 0; i < taskList.length || !found; i++) {
-    if (tasks.children[i] === objectToDelete || complete.children[i] === objectToDelete) {
+  for (var i = 0; i < tasks.children.length; i++) {
+    if (tasks.children[i] === objectToDelete) {
       found = true;
       index = parseInt(objectToDelete.getAttribute("tasklistsize"));
       objectToDelete.remove();
     }
   }
 
-  //console.log("newlist.length = " + newList.length);
+  for(var i = 0; i < complete.children.length; i++){
+    if (complete.children[i] === objectToDelete) {
+      found = true;
+      index = parseInt(objectToDelete.getAttribute("tasklistsize"));
+      objectToDelete.remove();
+    }
+  }
 
   if(!found)
     console.log("error: the task you selected wasn't found");
-  else
-    for(var i = 0; i < taskList.length; i++)
-      if(i != index)
-        newList.push(taskList[i]);
+  else{
+    for(var i = 0; i < index; i++)
+      newList.push(taskList[i]);
+    for(var i = index + 1; i < taskList.length; i++){
+      newList.push(taskList[i]);
+      newList[newList.length - 1].taskNumber -= 1;
+    }
+  }
   taskList = newList;
-  console.log(taskList);
+  taskListSize -= 1;
+
+  for(var i = 0; i < tasks.children.length; i++){
+    if(parseInt(tasks.children[i].getAttribute("tasklistsize")) > index){
+      tasks.children[i].setAttribute("tasklistsize", parseInt(tasks.children[i].getAttribute("tasklistsize")) - 1);
+    }
+  }
+
+  for(var i = 0; i < complete.children.length; i++){
+    if(parseInt(complete.children[i].getAttribute("tasklistsize")) > index){
+      complete.children[i].setAttribute("tasklistsize", parseInt(complete.children[i].getAttribute("tasklistsize")) - 1);
+    }
+  }
+  saveTaskList(JSON.stringify(taskList), taskListSize);
 }
