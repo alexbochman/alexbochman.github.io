@@ -308,7 +308,9 @@ function MinSectoMMSS(minutes, seconds) {
 
 function playSound() {
     if(soundOn) {
-        const audio = new Audio("../files/notification.mp3");
+        const audio = new Audio(
+          "https://raw.githubusercontent.com/alexbochman/Eugenius-Timer/master/files/notification.mp3"
+        );
         audio.play();
     }
 }
