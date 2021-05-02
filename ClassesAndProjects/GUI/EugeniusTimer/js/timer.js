@@ -141,6 +141,48 @@ window.onload = function init(){
     document.getElementById("resetTimerButton").addEventListener("click", clickReset);
     document.getElementById("switchBreakButton").addEventListener("click", clickPause);
     document.getElementById("skipBreakButton").addEventListener("click", clickSkip);
+    loadValues();
+
+    var file = document.getElementById("loadJSON");
+    reader = new FileReader();
+    file.addEventListener("change", function(){
+        var input = this.files[0];
+        if(input)
+            reader.readAsText(input);
+    });
+
+    reader.onload = function(event){
+        var contents;
+        try{
+            contents = JSON.parse(decodeURIComponent(event.target.result));
+        } catch(err){
+            window.alert("File is not a JSON file");
+            return;
+        }
+        console.log(contents);
+        if(!contents.forTimer){
+            window.alert("File is a JSON but not usable here");
+            return;
+        }
+        if(taskList.length > 0){
+            taskList = [];
+            taskListSize = 0;
+            document.getElementById("taskList").innerHTML = "";
+            document.getElementById("completedList").innerHTML = "";
+        }
+        taskList = contents.taskList;
+        clock.interval = parseInt(contents.interval);
+        clock.breakInterval = parseInt(contents.breakInterval);
+        document.getElementById("timer").innerHTML = "Next Break In:<br>" + millisecondsToMMSS(clock.interval);
+        isRunning = false;
+        clock.reset();
+        saveOptions(clock.interval, clock.breakInterval, soundOn);
+        saveTaskList(JSON.stringify(taskList));
+        setupTaskList();
+
+        soundOn = contents.sound;
+        document.getElementById("soundToggle").checked = soundOn ? true : false;
+    }
 }
 
 function clickStart(){
@@ -243,6 +285,7 @@ function setTimer(timerDef){
             }
         }
         console.log(clock);
+        saveOptions(clock.interval, clock.breakInterval, soundOn);
     }
 }
 
@@ -272,4 +315,5 @@ function playSound() {
 
 function toggleSwitch() {
     soundOn = soundOn ? false : true;
+    saveOptions(clock.interval, clock.breakInterval, soundOn);
 }
